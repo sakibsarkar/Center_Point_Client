@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Marhey:wght@400;500;600;700&display=swap');
+
+/* font-family: 'Marhey', sans-serif; */
+
+
+nav {
+    background: #ffffff;
+    box-shadow: 0 2px 16.8px 3.2px #00264214;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navWrapper {
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.navLinks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.navLinks ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border-right: 1px solid #242424;
+    padding: 0 20px 0 0;
+}
+
+
+.navLinks ul li .navLink {
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    color: #20263c;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    align-items: center;
+
+}
+
+.navLinks ul li .active {
+    color: #ff1959;
+    position: relative;
+}
+
+.navLinks ul li .active::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1.5px;
+    left: 0;
+    bottom: -6px;
+    background-color: #ff1959;
+}
+
+
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 29px;
+    line-height: 1;
+    font-family: 'Marhey', sans-serif;
+    color: #20263c;
+}
+
+.logo img {
+    width: 100px;
+}
+
+.logo span {
+    color: #ff1959;
+}
+
+.logInBtn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 23px;
+    border: 1px solid black;
+    padding: 4px 7px;
+    border-radius: 3px;
+    cursor: pointer;
+
+}

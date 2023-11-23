@@ -1,0 +1,19 @@
+.headingCon {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.headingCon h1 {
+    color: #ff7098;
+
+}
+
+
+.headingCon p {
+    font-family: 'Marhey', sans-serif;
+}

@@ -1,0 +1,116 @@
+.aboutCon {
+    padding: 100px 0;
+}
+
+.aboutBanner {
+    background: linear-gradient(rgba(13, 13, 23, 0.6), rgba(18, 13, 23, 0.6)), url(https://www.united.com.bd/wp-content/uploads/2021/11/GCP.jpeg);
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    margin: 35px 0 0 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.aboutBanner h1 {
+
+    font-size: 55px;
+
+}
+
+.aboutBanner p {
+    width: 500px;
+    text-align: center;
+}
+
+
+.aboutContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    padding: 0 30px;
+
+    margin: 100px 0 0 0;
+}
+
+.buildingInfo {
+    width: 800px;
+}
+
+.buildingInfo h1 {
+    font-size: 45px;
+    color: #525050;
+}
+
+.buildingInfo p {
+    color: #717171;
+
+}
+
+
+.buildingImg {
+    width: 700px;
+    height: 700px;
+    /* overflow: hidden; */
+    position: relative;
+
+}
+
+.buildingImg .buildingBg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overflowImg {
+    position: absolute;
+    width: 200px;
+    width: 324px;
+    right: -74px;
+    bottom: -68px;
+    border-radius: 5px;
+    border: 12px solid white;
+}
+
+.bulletPoints {
+    width: 90%;
+    margin: 12px 0 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: self-start;
+    flex-direction: column;
+    gap: 25px;
+    margin: 50px 0 0 0;
+}
+
+.bulletPoints .poitns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.bulletPoints .points h3 {
+    color: #717171;
+}
+
+.bulletPoints .points p {
+    font-size: 13px;
+}
+
+/* 
+.bulletPoints p span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+} */

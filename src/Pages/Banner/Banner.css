@@ -1,0 +1,91 @@
+.BannerImg {
+    object-fit: cover;
+    filter: brightness(0.7);
+}
+
+.carousel-slider {
+    height: 90vh !important;
+}
+
+.control-dots {
+    display: none !important;
+}
+
+
+
+.carousel .thumbs-wrapper {
+    display: none !important;
+}
+
+
+.bannerSlide {
+    position: relative;
+}
+
+.bannerContent {
+    font-family: 'Poppins', sans-serif;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 50px;
+
+    line-height: 1.2;
+
+}
+
+.bannerContent .title {
+    text-align: left;
+    width: 90%;
+
+}
+
+
+.bannerContent p {
+    font-size: 15px;
+    color: #fceded;
+    width: 70%;
+}
+
+.title h1 {
+    color: #fceded;
+}
+
+.title .cp {
+    color: #ff2662;
+}
+
+.title h1:hover {
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+    transition: 0.3s;
+}
+
+.title .cp:hover {
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+    transition: 0.3s;
+}
+
+.bannerContent button {
+    font-size: 23px;
+    border: 1px solid white;
+    background: #fff3f3;
+    padding: 8px 9px;
+    color: #ff497c;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+.bannerContent button:hover {
+    background: transparent;
+    color: white;
+    border: 1px solid #ffffff;
+}

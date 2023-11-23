@@ -1,10 +1,13 @@
 import "./Home.css";
+import AboutSection from "../AboutSection/AboutSection";
+import Banner from "../Banner/Banner";
 
 const Home = () => {
     return (
-        <div>
-            fasd
-        </div>
+        <>
+            <Banner></Banner>
+            <AboutSection></AboutSection>
+        </>
     );
 };
 
