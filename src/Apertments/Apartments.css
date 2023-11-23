@@ -1,0 +1,44 @@
+.apartmentsCon {
+    min-height: 80vh;
+    padding: 100px 0;
+}
+
+.apartmentsCards {
+
+    display: grid;
+    grid-template-columns: repeat(3, 350px);
+    gap: 20px;
+    justify-content: center;
+}
+
+.paginationBtns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 53px 0 0 0;
+}
+
+.paginationBtns .pageActive {
+    background: #ff1959;
+    border: none;
+    width: 30px;
+    height: 30px;
+    /* padding: 4px 0; */
+    color: white;
+    font-size: 16px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.paginationBtns .pageNotActive {
+    background: #ff87a8;
+    border: none;
+    width: 30px;
+    height: 30px;
+    /* padding: 4px 0; */
+    color: white;
+    font-size: 16px;
+    border-radius: 50%;
+    cursor: pointer;
+}

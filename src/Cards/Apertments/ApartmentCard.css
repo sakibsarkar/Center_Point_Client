@@ -1,0 +1,63 @@
+.card {
+    width: 350px;
+    padding: 0 0 20px 0;
+
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(249, 249, 249);
+    box-shadow: 0 2px 16.8px 3.2px #00264214;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.apartmenImg {
+    width: 350px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.apartmenImg img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.cardDetails {
+    padding: 13px;
+}
+
+
+
+.cardDetails p {
+    font-size: 16px;
+    color: #525050;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.cardDetails p span {
+
+    font-weight: 600;
+    display: flex;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.agreementBtn {
+    width: 95%;
+    margin: auto;
+}
+
+.agreementBtn button {
+    width: 100%;
+    border: none;
+    color: white;
+    padding: 10px 0px;
+    background: #ff1959;
+    font-size: 19px;
+    cursor: pointer;
+    border-radius: 5px;
+}
