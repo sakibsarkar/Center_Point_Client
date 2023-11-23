@@ -3,10 +3,10 @@ import HeadTitle from "../../Shared/HeadTitle/HeadTitle";
 import { GoDotFill } from "react-icons/go";
 
 const AboutSection = () => {
-  
+
     return (
         <div className="aboutCon">
-            <HeadTitle mainTitle={"About The Building"}></HeadTitle>
+            <HeadTitle mainTitle={"ABUT THE BUILDING"}></HeadTitle>
 
 
             <div className="aboutBanner">
@@ -22,12 +22,12 @@ const AboutSection = () => {
             <div className="aboutContent">
 
 
-                    <div className="buildingImg">
-                        <img className="buildingBg" src="https://i.ibb.co/bWgj8zr/ananta-plaza-central-2-of-17-overlay-2.jpg" alt="" />
+                <div className="buildingImg">
+                    <img className="buildingBg" src="https://i.ibb.co/bWgj8zr/ananta-plaza-central-2-of-17-overlay-2.jpg" alt="" />
 
-                        <img className="overflowImg" src="https://i.ibb.co/7Yg6d2p/GCP-16.jpg" alt="" />
-                    </div>
-       
+                    <img className="overflowImg" src="https://i.ibb.co/7Yg6d2p/GCP-16.jpg" alt="" />
+                </div>
+
 
                 <div className="buildingInfo">
                     <h1>Center Point</h1>

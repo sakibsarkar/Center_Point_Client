@@ -1,0 +1,69 @@
+.locationCon {
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+}
+
+
+.mapBox {
+    width: 700px;
+    height: 400px;
+    overflow: hidden;
+    transition: 0.4s;
+}
+
+.mapBox:hover .mapImg {
+
+
+    transform: scale(1.1);
+
+}
+
+.mapBox .mapImg {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+.locationBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: self-start;
+    padding: 0 50px;
+    width: 1300px;
+    margin: 0 auto;
+}
+
+.locationInfo {
+    width: 500px;
+}
+
+
+.locationInfo h1 {
+    font-size: 45px;
+    color: #525050;
+}
+
+.locationInfo p {
+    color: #717171;
+}
+
+
+.mapBtn {
+    background: #525050;
+    color: white;
+    padding: 3px 8px;
+    border: 1px solid #52505000;
+    transition: 0.3s;
+}
+
+.mapBtn:hover {
+    background-color: transparent;
+    border: 1px solid #525050;
+    color: #525050;
+}
