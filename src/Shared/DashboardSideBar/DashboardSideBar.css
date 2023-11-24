@@ -1,0 +1,28 @@
+.dashLogo {
+    width: fit-content;
+}
+
+.dashBoardLinks {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.dashBoardLinks .dashLink {
+    font-size: 23px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    color: #757575;
+    width: calc(100% - 10px);
+    padding: 6px 5px;
+
+}
+
+.dashBoardLinks .active {
+    background-color: #ff1959;
+    color: white;
+
+}

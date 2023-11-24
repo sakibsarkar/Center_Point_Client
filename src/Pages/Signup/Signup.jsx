@@ -1,17 +1,29 @@
 import "./Signup.css";
 import SocialLogin from "../../Shared/SocialLogin/SocialLogin";
 import ToastSuccess from "../../Toast/ToastSuccess";
-import { useState } from "react";
+import UseAxios from "../../Axios/UseAxios";
+import { updateProfile } from "firebase/auth";
+import { useContext, useState } from "react";
 import { FaImages } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { Authcontext } from "../../AuthProvider/AuthProvider";
+import { addtoLS } from "../../LocalStorage/localStorage";
 import { uploadImage } from "../../upLoadImg/uploadImage";
 
-const Signup = () => {
+const Signup = ({ location }) => {
 
     const [imgName, setImgName] = useState("Choose your photo")
     const [error, setError] = useState("")
 
-    
+
+
+    const { createAccountWithEmail, naviGateLocation } = useContext(Authcontext)
+
+    const navigate = useNavigate()
+
+    const address = naviGateLocation?.state ? naviGateLocation?.state : "/"
+
+    const axios = UseAxios()
 
     const handleSetImgName = (e) => {
         const imgName = e.target.files[0].name
@@ -31,6 +43,7 @@ const Signup = () => {
         const fname = form.Fname.value
         const lname = form.Lname.value
         const fullName = `${fname} ${lname}`
+        const email = form.email.value
         const password = form.password.value
         const confirm = form.confirm.value
 
@@ -54,9 +67,33 @@ const Signup = () => {
             // return toast.error("password should contain atleast r")
         }
 
+
+        if (password !== confirm) {
+            return setError("password didn't match")
+        }
         setError("")
         const { data } = await uploadImage(image)
-        console.log(data.display_url);
+        // console.log(data.display_url);
+
+        const { user } = await createAccountWithEmail(email, password)
+
+        await updateProfile(user, {
+            displayName: fullName,
+            photoURL: data?.display_url
+        })
+
+        const { data: token } = await axios.post("/user/token", { email: email })
+        addtoLS(token)
+
+        const userData = { email: email, role: "user" }
+
+        const { data: up } = await axios.put(`/add/user/${email}`, userData)
+
+        navigate(address)
+
+
+
+
     }
     return (
         <div className="signupCon">

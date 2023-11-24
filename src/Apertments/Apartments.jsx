@@ -4,10 +4,13 @@ import Loader from "../Loader/Loader";
 import UseAxios from "../Axios/UseAxios";
 import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
+import { getItemFromLS } from "../LocalStorage/localStorage";
 
 const Apartments = () => {
 
     const axios = UseAxios()
+    const token = getItemFromLS()
+    console.log(token);
     const [page, setPage] = useState(0)
     const { data = [], isLoading } = useQuery({
         queryKey: ["allApartments", { page }],
@@ -21,7 +24,7 @@ const Apartments = () => {
     const handleChangePage = (pageNum) => {
         setPage(pageNum)
         window.scroll(0, 0)
-        
+
 
     }
 

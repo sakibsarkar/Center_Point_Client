@@ -1,0 +1,96 @@
+.profileContainer {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profileCard {
+    width: 830px;
+    height: 450px;
+    background: #ffffff;
+    padding: 35px;
+    box-shadow: 0 2px 16.8px 3.2px #0027420d;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: self-start;
+    position: relative;
+    z-index: 22;
+    overflow: hidden;
+}
+
+.profileTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.profileImgBox {
+
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+    background-color: #ff1959;
+    padding: 5px;
+}
+
+.profileImgBox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+.profileInfo h1 {
+    color: #ffffff;
+}
+
+.profileInfo p {
+    color: white;
+}
+
+
+.profileBottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+
+.accountActivity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.accountActivity button {
+    width: 115px;
+    padding: 10px 0;
+    border: none;
+    background: #ffb800;
+    color: white;
+    cursor: pointer;
+}
+
+.accountActivity .profileLogout {
+    background-color: #ff1947;
+}
+
+
+.shape {
+    border-radius: 21% 79% 70% 30% / 44% 58% 42% 56%;
+    width: 500px;
+    height: 456px;
+    background-color: #ff1959;
+    position: absolute;
+    z-index: -1;
+    top: -104px;
+    right: -84px;
+}

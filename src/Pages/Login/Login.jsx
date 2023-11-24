@@ -1,16 +1,40 @@
 import "./Login.css";
 import SocialLogin from "../../Shared/SocialLogin/SocialLogin";
+import UseAxios from "../../Axios/UseAxios";
 import { TextField } from "@mui/material";
-import { Link } from "react-router-dom";
+import { useContext, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Authcontext } from "../../AuthProvider/AuthProvider";
+import { addtoLS } from "../../LocalStorage/localStorage";
 
 const Login = () => {
-    const handleLogin = (e) => {
+    const { loginWithEmail, setNaviGateLocation } = useContext(Authcontext)
+    const location = useLocation()
+    setNaviGateLocation(location)
+
+
+    const navigate = useNavigate()
+
+
+    const axios = UseAxios()
+    const handleLogin = async (e) => {
         e.preventDefault()
         const form = e.target
         const email = form.email.value
         const pass = form.password.value
 
-        console.log(email, pass);
+        try {
+            await loginWithEmail(email, pass)
+            const { data: token } = await axios.post("/user/token", { email: email })
+            addtoLS(token)
+            const userData = { email: email, role: "user" }
+            await axios.put(`/add/user/${email}`, userData)
+            navigate(location?.state ? location.state : "/")
+        }
+        catch (err) {
+            console.log(err)
+
+        }
 
     }
 

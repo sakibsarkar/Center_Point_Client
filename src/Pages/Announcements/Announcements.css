@@ -1,0 +1,14 @@
+.announcementCon {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.announcementCardCon {
+    display: grid;
+    grid-template-columns: repeat(3, 327px);
+    gap: 20px;
+}

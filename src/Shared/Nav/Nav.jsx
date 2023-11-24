@@ -1,9 +1,13 @@
 import "./Nav.css";
+import { useContext, useState } from "react";
 import { IoMdHome, IoMdLogIn } from "react-icons/io";
 import { MdApartment } from "react-icons/md";
 import { Link, NavLink } from "react-router-dom";
+import { Authcontext } from "../../AuthProvider/AuthProvider";
 
 const Nav = () => {
+    const { user } = useContext(Authcontext)
+    const [show, setShow] = useState(false)
     return (
         <nav>
             <div className="navWrapper">
@@ -24,10 +28,32 @@ const Nav = () => {
                         </NavLink></li>
                     </ul>
 
-                    <Link className="logInBtn" to={"/login"}>
-                        <IoMdLogIn></IoMdLogIn>
-                        <p>LogIn</p>
-                    </Link>
+                    {
+                        user ?
+                            <div className="userBox">
+                                <div className="userImg" onClick={() => setShow(!show)}>
+                                    <img src={user?.photoURL} alt="" />
+                                </div>
+
+                                {
+                                    show ?
+                                        <div className="userModal">
+                                            <h3>{user?.displayName}</h3>
+                                            <Link to={"/dashboard"}>Dashboard</Link>
+                                            <Link to={"/profile"}>Profile</Link>
+                                            <button>LogOut</button>
+                                        </div>
+
+                                        :
+                                        ""
+                                }
+                            </div>
+                            :
+                            <Link className="logInBtn" to={"/login"}>
+                                <IoMdLogIn></IoMdLogIn>
+                                <p>LogIn</p>
+                            </Link>
+                    }
                 </div>
 
 

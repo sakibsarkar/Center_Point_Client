@@ -17,7 +17,7 @@ const UseAxios = () => {
     },
 
         async (err) => {
-            const status = err.response.status
+            const status = err?.response?.status
             if (status === 401 || status === 403) {
                 await logOut()
                 // call the logout api to clear token

@@ -1,0 +1,41 @@
+.anncWrapper {
+    width: fit-content;
+    height: fit-content;
+}
+
+.anncCard {
+    width: 297px;
+    padding: 20px;
+    background-color: #ff2a65;
+    border-radius: 7px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+    position: relative;
+    cursor: pointer;
+}
+
+.anncCard h1 {
+    font-size: 20px;
+}
+
+.bellIcon {
+    position: absolute;
+    background: white;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ff2a65;
+    border-radius: 50%;
+    right: -6px;
+    top: -15px;
+    font-size: 33px;
+}
+
+.anncModal {
+    position: absolute;
+}
