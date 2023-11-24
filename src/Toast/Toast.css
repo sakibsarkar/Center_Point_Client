@@ -1,0 +1,31 @@
+.toastWrapper {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 20px;
+    left: 0;
+}
+
+.toastContainer {
+    background: white;
+    width: 200px;
+    background: rebeccapurple;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.successIcon {
+    background: #4cff4c;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: white;
+}

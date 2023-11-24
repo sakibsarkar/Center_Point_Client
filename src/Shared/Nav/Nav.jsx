@@ -24,7 +24,7 @@ const Nav = () => {
                         </NavLink></li>
                     </ul>
 
-                    <Link className="logInBtn">
+                    <Link className="logInBtn" to={"/login"}>
                         <IoMdLogIn></IoMdLogIn>
                         <p>LogIn</p>
                     </Link>

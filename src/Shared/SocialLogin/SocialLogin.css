@@ -1,0 +1,57 @@
+.socialCon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+    position: relative;
+}
+
+.or {
+    position: absolute;
+    top: -33px;
+    width: 100%;
+    text-align: center;
+
+
+}
+
+
+.or p {
+    width: 100%;
+    position: relative;
+}
+
+
+.or p::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 35%;
+    height: 2px;
+    background-color: #3a98d7;
+    top: 11px;
+}
+
+.or p::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 35%;
+    height: 2px;
+    background-color: #3a98d7;
+    top: 11px;
+}
+
+.socialCon .social {
+    font-size: 32px;
+    background: #ececec;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 4px;
+    cursor: pointer;
+}
