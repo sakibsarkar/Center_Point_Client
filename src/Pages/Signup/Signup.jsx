@@ -1,5 +1,6 @@
 import "./Signup.css";
 import SocialLogin from "../../Shared/SocialLogin/SocialLogin";
+import Swal from "sweetalert2";
 import ToastSuccess from "../../Toast/ToastSuccess";
 import UseAxios from "../../Axios/UseAxios";
 import { updateProfile } from "firebase/auth";
@@ -16,8 +17,7 @@ const Signup = ({ location }) => {
     const [error, setError] = useState("")
 
 
-
-    const { createAccountWithEmail, naviGateLocation } = useContext(Authcontext)
+    const { createAccountWithEmail, naviGateLocation, waitForUser, setWaitForUser } = useContext(Authcontext)
 
     const navigate = useNavigate()
 
@@ -71,25 +71,36 @@ const Signup = ({ location }) => {
         if (password !== confirm) {
             return setError("password didn't match")
         }
-        setError("")
-        const { data } = await uploadImage(image)
-        // console.log(data.display_url);
+        try {
+            setError("")
+            const { data } = await uploadImage(image)
+            // console.log(data.display_url);
 
-        const { user } = await createAccountWithEmail(email, password)
+            const { user } = await createAccountWithEmail(email, password)
 
-        await updateProfile(user, {
-            displayName: fullName,
-            photoURL: data?.display_url
-        })
+            await updateProfile(user, {
+                displayName: fullName,
+                photoURL: data?.display_url
+            })
 
-        const { data: token } = await axios.post("/user/token", { email: email })
-        addtoLS(token)
+            const { data: token } = await axios.post("/user/token", { email: email })
+            addtoLS(token)
 
-        const userData = { email: email, role: "user" }
+            const userData = { email: email, role: "user" }
 
-        const { data: up } = await axios.put(`/add/user/${email}`, userData)
+            const { data: up } = await axios.put(`/add/user/${email}`, userData)
+            setWaitForUser(!waitForUser)
+            navigate(address)
+        }
 
-        navigate(address)
+        catch (err) {
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Something went wrong!",
+                footer: ''
+            });
+        }
 
 
 

@@ -1,5 +1,6 @@
 import "./Login.css";
 import SocialLogin from "../../Shared/SocialLogin/SocialLogin";
+import Swal from "sweetalert2";
 import UseAxios from "../../Axios/UseAxios";
 import { TextField } from "@mui/material";
 import { useContext, useState } from "react";
@@ -27,12 +28,15 @@ const Login = () => {
             await loginWithEmail(email, pass)
             const { data: token } = await axios.post("/user/token", { email: email })
             addtoLS(token)
-            const userData = { email: email, role: "user" }
-            await axios.put(`/add/user/${email}`, userData)
             navigate(location?.state ? location.state : "/")
         }
         catch (err) {
-            console.log(err)
+            Swal.fire({
+                icon: "error",
+                title: "opps..",
+                text: "something went wrong, please check your email or password",
+                footer: '<a href="#">Why do I have this issue?</a>'
+            });
 
         }
 

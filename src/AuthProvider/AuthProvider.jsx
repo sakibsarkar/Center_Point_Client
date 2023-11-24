@@ -1,6 +1,9 @@
+import UseAxios from "../Axios/UseAxios";
 import auth from "../FirebaseConfig";
+import axios from "axios";
 import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
+import { getItemFromLS } from "../LocalStorage/localStorage";
 
 export const Authcontext = createContext(null)
 
@@ -10,8 +13,12 @@ const AuthProvider = ({ children }) => {
     const [user, setUser] = useState("")
     const [waitForUser, setWaitForUser] = useState(true)
     const [toast, setToast] = useState(null)
+    const [role, setRole] = useState("")
+    const [roleLoading, setRoleLoading] = useState(true)
     const [naviGateLocation, setNaviGateLocation] = useState("")//it will be use in register page we will set the value from log in page
 
+    const token = getItemFromLS()
+    // const axios = UseAxios()
 
     const googleAuthentication = () => {
         setLoading(true)
@@ -45,9 +52,23 @@ const AuthProvider = ({ children }) => {
 
         onAuthStateChanged(auth, USER => {
             setUser(USER)
+
+            if (USER) {
+                axios.get(`http://localhost:5000/api/user/role?token=${token}&&email=${USER?.email}`)
+                    .then(({ data }) => {
+
+                        setRole(data?.role)
+                        setRoleLoading(false)
+                    })
+
+            }
             setLoading(false)
         })
-    }, [waitForUser])
+
+
+
+
+    }, [waitForUser, token])
 
 
     const items = {
@@ -62,7 +83,9 @@ const AuthProvider = ({ children }) => {
         toast,
         setToast,
         naviGateLocation,
-        setNaviGateLocation
+        setNaviGateLocation,
+        role,
+        roleLoading
     }
 
 

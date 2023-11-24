@@ -1,0 +1,46 @@
+.manageMemberCon {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.manageMemberCon table {
+    border-collapse: collapse;
+    width: 700px;
+    /* border-radius: ; */
+}
+
+.manageMemberCon thead {
+    background: #01987a;
+    color: white;
+}
+
+.manageMemberCon th {
+    text-align: left;
+    padding: 8px;
+}
+
+
+.manageMemberCon td {
+
+    text-align: left;
+    padding: 8px;
+}
+
+.deleteCell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: #ff6363; */
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+
+.normalBg {
+    background-color: #f3f3f3;
+    border-bottom: 1px solid #01987a;
+}

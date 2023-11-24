@@ -4,10 +4,22 @@ import { IoMdHome, IoMdLogIn } from "react-icons/io";
 import { MdApartment } from "react-icons/md";
 import { Link, NavLink } from "react-router-dom";
 import { Authcontext } from "../../AuthProvider/AuthProvider";
+import { removeItemFromLS } from "../../LocalStorage/localStorage";
 
 const Nav = () => {
-    const { user } = useContext(Authcontext)
+    const { user, logOut } = useContext(Authcontext)
     const [show, setShow] = useState(false)
+    const handleLogout = async () => {
+        try {
+            await logOut()
+            removeItemFromLS()
+        }
+
+        catch (err) {
+            console.log(err)
+        }
+
+    }
     return (
         <nav>
             <div className="navWrapper">
@@ -41,7 +53,7 @@ const Nav = () => {
                                             <h3>{user?.displayName}</h3>
                                             <Link to={"/dashboard"}>Dashboard</Link>
                                             <Link to={"/profile"}>Profile</Link>
-                                            <button>LogOut</button>
+                                            <button onClick={() => handleLogout()}>LogOut</button>
                                         </div>
 
                                         :

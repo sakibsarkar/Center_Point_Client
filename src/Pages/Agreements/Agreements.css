@@ -1,0 +1,57 @@
+.agreementReqCon {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.agreementReqCon table {
+    border-collapse: collapse;
+    width: 1000px;
+    /* border-radius: ; */
+}
+
+.agreementReqCon thead {
+    background: #01987a;
+    color: white;
+}
+
+.agreementReqCon th {
+    text-align: left;
+    padding: 8px;
+}
+
+
+.agreementReqCon td {
+
+    text-align: left;
+    padding: 8px;
+}
+
+
+
+.normalRow {
+    background-color: #f3f3f3;
+    border-bottom: 1px solid #01987a;
+}
+
+.agreementReqCon .reject {
+    padding: 4px 11px;
+    border: none;
+    background: red;
+    color: white;
+    cursor: pointer;
+
+}
+
+.agreementReqCon .accecpt {
+    padding: 4px 11px;
+    border: none;
+    background: rgb(1 152 122);
+    color: white;
+    margin: 0 0 0 11px;
+    cursor: pointer;
+
+}

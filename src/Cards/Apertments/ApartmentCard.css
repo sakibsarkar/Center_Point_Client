@@ -9,6 +9,16 @@
     border-radius: 10px;
 }
 
+
+.appImg {
+    transition: 0.5s;
+}
+
+.card:hover .appImg {
+    transform: scale(1.1) rotate(6deg);
+    filter: saturate(0);
+}
+
 .apartmenImg {
     width: 350px;
     height: 200px;
@@ -60,4 +70,10 @@
     font-size: 19px;
     cursor: pointer;
     border-radius: 5px;
+    transition: 0.5s;
+}
+
+.agreementBtn button:hover {
+    background-color: transparent;
+    box-shadow: inset 333px 0 #ff1959;
 }

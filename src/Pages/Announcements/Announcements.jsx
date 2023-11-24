@@ -15,7 +15,6 @@ const Announcements = () => {
             return result.reverse()
         }
     })
-    console.log(data);
     return (
         <div className="announcementCon">
             <div className="announcementCardCon">
