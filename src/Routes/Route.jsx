@@ -3,6 +3,7 @@ import AdminRoute from "../PrivateRoute/AdminRoute";
 import Agreements from "../Pages/Agreements/Agreements";
 import Announcements from "../Pages/Announcements/Announcements";
 import Apartments from "../Apertments/Apartments";
+import Checkout from "../Pages/Checkout/Checkout";
 import DashboardLayout from "../Layout/DashboardLayout";
 import Home from "../Pages/Home/Home";
 import Login from "../Pages/Login/Login";
@@ -44,7 +45,8 @@ export const router = createBrowserRouter([
     {
         path: "/signup",
         element: <Signup></Signup>
-    }, {
+    },
+    {
         path: "/dashboard",
         element: <DashboardLayout></DashboardLayout>,
         children: [
@@ -86,7 +88,12 @@ export const router = createBrowserRouter([
             {
                 path: "/dashboard/makePayment",
                 element: <MemberRoute><MakePayment /></MemberRoute>
-            }
+            },
+
         ]
+    },
+    {
+        path: "/payment",
+        element: <MemberRoute><Checkout /></MemberRoute>
     }
 ])

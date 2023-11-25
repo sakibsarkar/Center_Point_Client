@@ -9,6 +9,8 @@ export const Authcontext = createContext(null)
 
 const AuthProvider = ({ children }) => {
 
+
+    const [paymentObject, setPaymentObject] = useState({})
     const [loading, setLoading] = useState(true)
     const [user, setUser] = useState("")
     const [waitForUser, setWaitForUser] = useState(true)
@@ -16,6 +18,7 @@ const AuthProvider = ({ children }) => {
     const [role, setRole] = useState("")
     const [roleLoading, setRoleLoading] = useState(true)
     const [naviGateLocation, setNaviGateLocation] = useState("")//it will be use in register page we will set the value from log in page
+
 
     const token = getItemFromLS()
     // const axios = UseAxios()
@@ -85,7 +88,9 @@ const AuthProvider = ({ children }) => {
         naviGateLocation,
         setNaviGateLocation,
         role,
-        roleLoading
+        roleLoading,
+        paymentObject,
+        setPaymentObject
     }
 
 

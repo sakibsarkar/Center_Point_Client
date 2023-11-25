@@ -21,7 +21,7 @@ const AdminProfile = () => {
     })
 
 
-    console.log(data);
+  
     return (
         <div>
 

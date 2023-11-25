@@ -12,7 +12,7 @@ import { Authcontext } from "../../AuthProvider/AuthProvider";
 
 const DashboardSideBar = () => {
     const { role } = useContext(Authcontext)
-    console.log(role);
+   
     return (
         <div>
             <Link className="logo dashLogo">

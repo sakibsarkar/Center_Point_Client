@@ -57,12 +57,12 @@ const Signup = ({ location }) => {
         }
 
         if (!capital.test(password)) {
-            console.log("a");
+           
             return setError("* A capital letter required")
         }
 
         if (!special.test(password)) {
-            console.log("a");
+        
             return setError("* A special character required")
             // return toast.error("password should contain atleast r")
         }

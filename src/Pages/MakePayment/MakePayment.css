@@ -1,0 +1,79 @@
+.beforePaymentCon {
+    width: 100%;
+    min-height: 75vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+.paymentBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 16.8px 3.2px #0027420d;
+    padding: 0 15px 0 0;
+    background-color: white;
+}
+
+
+.paymentDetails {
+
+    background: rgb(255, 255, 255);
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 2px 16.8px 3.2px #0027420d;
+    padding: 30px;
+}
+
+.paymentDetails input {
+    width: calc(100% - 14px);
+    height: 36px;
+    padding: 0 7px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #ebebeb;
+}
+
+.paymentDetails .brother {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.paymentDetails .brother select {
+    width: 45%;
+    height: 36px;
+    background: #ebebeb;
+    border: none;
+    font-size: 19px;
+    padding: 0 5px;
+    outline: none;
+}
+
+.paymentBox button {
+    color: white;
+    width: 100%;
+    padding: 9px 0px;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    background: #ff1959;
+    transition: 0.3s;
+}
+
+
+.paymentBox button:hover {
+    background-color: rgb(51, 153, 104);
+    width: 96%;
+}

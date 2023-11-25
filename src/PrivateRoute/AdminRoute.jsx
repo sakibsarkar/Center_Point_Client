@@ -9,7 +9,7 @@ import { userRole } from "../userRole";
 
 const AdminRoute = ({ children }) => {
     const { loading, user, role, roleLoading } = useContext(Authcontext);
-    console.log(role); // output: admin
+   
 
     if (loading) {
         return <Loader></Loader>;

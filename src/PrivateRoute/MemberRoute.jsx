@@ -5,7 +5,7 @@ import { Authcontext } from "../AuthProvider/AuthProvider";
 
 const MemberRoute = ({ children }) => {
     const { loading, user, role, roleLoading } = useContext(Authcontext);
-    console.log(role); // output: admin
+    // output: admin
 
     if (loading) {
         return <Loader></Loader>;

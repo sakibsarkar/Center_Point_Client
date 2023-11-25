@@ -10,7 +10,7 @@ const Apartments = () => {
 
     const axios = UseAxios()
     const token = getItemFromLS()
-    console.log(token);
+
     const [page, setPage] = useState(0)
     const { data = [], isLoading } = useQuery({
         queryKey: ["allApartments", { page }],

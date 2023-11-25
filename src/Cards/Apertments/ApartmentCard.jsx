@@ -59,8 +59,8 @@ const ApartmentCard = ({ data }) => {
         await axios.post(`/agreement?token=${token}`, agreementData)
 
         Swal.fire({
-            title: "your agreement request has been send. please wait for confirm mation",
-            text: "You clicked the button!",
+            title: "success",
+            text: "your agreement request has been send. please wait for confirm mation",
             icon: "success"
         });
     }
