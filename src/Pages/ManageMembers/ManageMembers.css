@@ -44,3 +44,8 @@
     background-color: #f3f3f3;
     border-bottom: 1px solid #01987a;
 }
+
+
+.deleteCell {
+    color: red;
+}

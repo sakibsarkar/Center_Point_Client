@@ -7,8 +7,9 @@ import { Authcontext } from "../../AuthProvider/AuthProvider";
 import { removeItemFromLS } from "../../LocalStorage/localStorage";
 
 const Nav = () => {
-    const { user, logOut } = useContext(Authcontext)
+    const { user, logOut, role } = useContext(Authcontext)
     const [show, setShow] = useState(false)
+    const [profileRoute, setProfileRoute] = useState()
     const handleLogout = async () => {
         try {
             await logOut()
@@ -20,6 +21,24 @@ const Nav = () => {
         }
 
     }
+
+
+
+    const showDropDown = () => {
+        setShow(!show)
+
+        if (role === "admin") {
+            return setProfileRoute("/dashboard/adminProfile")
+        }
+        if (role === "user") {
+            return setProfileRoute("/dashboard/profile")
+        }
+        if (role === "member") {
+            return setProfileRoute("/dashboard/memberProfile")
+        }
+    }
+
+
     return (
         <nav>
             <div className="navWrapper">
@@ -43,7 +62,7 @@ const Nav = () => {
                     {
                         user ?
                             <div className="userBox">
-                                <div className="userImg" onClick={() => setShow(!show)}>
+                                <div className="userImg" onClick={() => showDropDown()}>
                                     <img src={user?.photoURL} alt="" />
                                 </div>
 
@@ -51,8 +70,8 @@ const Nav = () => {
                                     show ?
                                         <div className="userModal">
                                             <h3>{user?.displayName}</h3>
-                                            <Link to={"/dashboard"}>Dashboard</Link>
-                                            <Link to={"/profile"}>Profile</Link>
+                                            <Link to={profileRoute || "/dashboard"}>Dashboard</Link>
+                                            <Link to={profileRoute || "/"}>Profile</Link>
                                             <button onClick={() => handleLogout()}>LogOut</button>
                                         </div>
 

@@ -7,7 +7,12 @@ import DashboardLayout from "../Layout/DashboardLayout";
 import Home from "../Pages/Home/Home";
 import Login from "../Pages/Login/Login";
 import MainLayout from "../Layout/mainLayout";
+import MakeAnnouncement from "../Pages/MakeAnnouncement/MakeAnnouncement";
+import MakePayment from "../Pages/MakePayment/MakePayment";
+import ManageCoupon from "../Pages/ManageCoupon/ManageCoupon";
 import ManageMembers from "../Pages/ManageMembers/ManageMembers";
+import MemberProfile from "../Pages/MemberProfile/MemberProfile";
+import MemberRoute from "../PrivateRoute/MemberRoute";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import Signup from "../Pages/Signup/Signup";
 import UserProfile from "../UserProfile/UserProfile";
@@ -47,6 +52,8 @@ export const router = createBrowserRouter([
                 path: "/dashboard/profile",
                 element: <PrivateRoute><UserProfile></UserProfile></PrivateRoute>
             },
+
+            // admin
             {
                 path: "/dashboard/announcements",
                 element: <PrivateRoute><Announcements></Announcements></PrivateRoute>
@@ -62,6 +69,23 @@ export const router = createBrowserRouter([
             {
                 path: "/dashboard/agreementsReq",
                 element: <AdminRoute><Agreements></Agreements></AdminRoute>
+            },
+            {
+                path: "/dashboard/make/announcements",
+                element: <AdminRoute><MakeAnnouncement /></AdminRoute>
+            },
+            {
+                path: "/dashboard/manageCoupon",
+                element: <AdminRoute><ManageCoupon /></AdminRoute>
+            },
+            // member
+            {
+                path: "/dashboard/memberProfile",
+                element: <MemberRoute><MemberProfile></MemberProfile></MemberRoute>
+            },
+            {
+                path: "/dashboard/makePayment",
+                element: <MemberRoute><MakePayment /></MemberRoute>
             }
         ]
     }

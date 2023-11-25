@@ -18,7 +18,7 @@ const SocialLogin = ({ marginT = 0 }) => {
         const { user } = await media()
         const { data } = await axios.post("/user/token", { email: user?.email ? user.email : user.uid })
         addtoLS(data)
-        const userData = { email: user?.email, role: "user", name: user?.displayName, apartment: "" }
+        const userData = { email: user?.email, role: "user", name: user?.displayName, apartment: "", agreementDate: "" }
         const { data: up } = await axios.put(`/add/user/${user?.email}`, userData)
         console.log(user)
         navigate(adress)

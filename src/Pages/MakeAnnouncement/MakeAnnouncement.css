@@ -1,0 +1,63 @@
+.announceMentCon {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.announceMentCon form {
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 450px;
+    padding: 20px;
+    box-shadow: 0 2px 16.8px 3.2px #00264214;
+
+
+
+}
+
+.announceMentCon form input {
+    width: calc(100% - 16px);
+    outline: none;
+    border: none;
+    height: 35px;
+    padding: 0 8px;
+    background-color: #ededed;
+}
+
+.announceMentCon form textarea {
+    width: calc(100% - 16px);
+    resize: none;
+    height: 120px;
+    padding: 8px;
+    outline: none;
+    border: none;
+    background-color: #ededed;
+}
+
+.announceMentCon form button {
+    width: 100%;
+    border: none;
+    padding: 9px 0;
+    background: #ff1959;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.announceMentCon form button:hover {
+    background: #df1a52;
+    width: 96%;
+    margin: auto;
+
+}

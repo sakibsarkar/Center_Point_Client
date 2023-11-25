@@ -1,13 +1,9 @@
 import Loader from "../Loader/Loader";
-import UseAxios from "../Axios/UseAxios";
-import { useQuery } from "@tanstack/react-query";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { Navigate } from "react-router-dom";
 import { Authcontext } from "../AuthProvider/AuthProvider";
-import { getItemFromLS } from "../LocalStorage/localStorage";
-import { userRole } from "../userRole";
 
-const AdminRoute = ({ children }) => {
+const MemberRoute = ({ children }) => {
     const { loading, user, role, roleLoading } = useContext(Authcontext);
     console.log(role); // output: admin
 
@@ -23,12 +19,14 @@ const AdminRoute = ({ children }) => {
         return <Loader></Loader>
     }
 
-    if (role === "admin") {
+    if (role === "member") {
         return children;
     }
 
-    console.log('User is not an admin');
+    console.log('User is not an member');
     return <Navigate state={location.pathname} to={"/"}></Navigate>;
 };
 
-export default AdminRoute;
+
+
+export default MemberRoute;

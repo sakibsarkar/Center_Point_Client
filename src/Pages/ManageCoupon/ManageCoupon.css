@@ -1,0 +1,155 @@
+.couponMangeCon {
+    min-height: 70vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+.couponBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 36px;
+}
+
+.couponBox img {
+    width: 400px;
+}
+
+.couponBox table {
+    border-collapse: collapse;
+    width: 500px;
+    text-align: left;
+    border-bottom: 1px solid #e1e1e1;
+    position: relative;
+}
+
+.couponBox thead {
+    background: #01987a;
+    color: white;
+
+
+}
+
+
+.couponBox td {
+    padding: 8px;
+}
+
+.couponBox th {
+    padding: 8px;
+}
+
+.couponStatus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+
+.rotate {
+    transition: 0.3s;
+}
+
+.couponStatus:hover .rotate {
+    transform: rotate(180deg);
+
+}
+
+
+.unactive {
+    color: red;
+}
+
+.active {
+    color: #01987a;
+}
+
+
+.oddCell {
+    background-color: #eef4f3;
+}
+
+.couponAdd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-size: 15px;
+    background: #01987a;
+    border: navajowhite;
+    color: white;
+    padding: 6px;
+    cursor: pointer;
+    margin: 10px 0 0 0;
+    position: absolute;
+    bottom: -36px;
+}
+
+
+.couponModal {
+
+    background-color: rgb(255, 255, 255);
+    width: 400px;
+    height: 200px;
+    padding: 40px 20px 20px 20px;
+    box-shadow: 0 2px 16.8px 3.2px #00264214;
+    position: relative;
+}
+
+.couponModal .closeCouponModal {
+    position: absolute;
+    content: "";
+    font-size: 21px;
+    top: 6px;
+    right: 13px;
+    cursor: pointer;
+}
+
+.couponModal form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+}
+
+
+.couponModal form input {
+    width: calc(100% - 10px);
+    padding: 7px 5px;
+    height: 20px;
+    padding: 7px 5px;
+    background: #ebebeb;
+    border: none;
+    color: #040404;
+    outline: none;
+}
+
+.couponModal form textarea {
+    width: 100%;
+    height: 70px;
+    padding: 7px 5px;
+    resize: none;
+    outline: none;
+    background: #ebebeb;
+    border: none;
+    color: #040404;
+}
+
+
+.couponModalCon {
+    height: 100vh;
+    width: 100vw;
+    background-color: #8b8b8b75;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

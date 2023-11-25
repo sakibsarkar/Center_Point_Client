@@ -45,12 +45,19 @@ const Agreements = () => {
     }
 
     const handleAccept = async (email, id, aptID) => {
+        const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+        const date = new Date()
+        const month = date.getMonth()
+        const day = date.getDay()
+        const year = date.getFullYear()
+
+        const today = `${day} ${months[month]}. ${year}`
 
         try {
             await axios.put(`/agreement/status?token=${token}&&id=${id}&&role=${role}`)
             await axios.put(`/user/role/update?token=${token}&&email=${email}&&role=${role}`)
             await axios.put(`/apartment/book?token=${token}&&id=${aptID}&&role=${role}`)
-            await axios.put(`/user/booked?token=${token}&&aptID=${aptID}&&role=${role}&&email=${email}`)
+            await axios.put(`/user/booked?token=${token}&&aptID=${aptID}&&role=${role}&&email=${email}&&agreeDate=${today}`)
             // set aptid to the userData
 
 

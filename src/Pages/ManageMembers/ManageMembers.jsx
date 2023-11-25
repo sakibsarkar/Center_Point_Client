@@ -1,4 +1,5 @@
 import "./ManageMembers.css";
+import Swal from "sweetalert2";
 import UseAxios from "../../Axios/UseAxios";
 import { useQuery } from "@tanstack/react-query";
 import { useContext } from "react";
@@ -10,7 +11,7 @@ const ManageMembers = () => {
   const { role } = useContext(Authcontext)
   const axios = UseAxios()
   const token = getItemFromLS()
-  const { data = [{}] } = useQuery({
+  const { data = [{}], refetch } = useQuery({
     queryKey: ["agreementsReq"],
     queryFn: async () => {
       const { data: result } = await axios.get(`/all/members?token=${token}&&role=${role}`)
@@ -22,10 +23,17 @@ const ManageMembers = () => {
   // _id,email,role,create,timestamp,name,apartment
 
 
-  const handleDeleteMember = async (aptId) => {
+  const handleDeleteMember = async (aptId, email) => {
 
     try {
-      await axios.put(`/member/delete?role=${role}&&token=${token}&&email=${data.email}`)
+      await axios.put(`/member/delete?aptId=${aptId}&&token=${token}&&email=${email}`)
+      refetch()
+      Swal.fire({
+        title: "Successful!",
+        text: "Succecfully removed from member role",
+        icon: "success"
+      });
+
     }
 
     catch (err) {

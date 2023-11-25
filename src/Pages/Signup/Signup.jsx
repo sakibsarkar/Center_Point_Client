@@ -86,7 +86,7 @@ const Signup = ({ location }) => {
             const { data: token } = await axios.post("/user/token", { email: email })
             addtoLS(token)
 
-            const userData = { email: email, role: "user", name: fullName, apartment: "" }
+            const userData = { email: email, role: "user", name: fullName, apartment: "", agreementDate: "" }
 
             const { data: up } = await axios.put(`/add/user/${email}`, userData)
             setWaitForUser(!waitForUser)
