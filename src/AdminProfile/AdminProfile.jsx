@@ -4,6 +4,7 @@ import UseAxios from "../Axios/UseAxios";
 import { useQuery } from "@tanstack/react-query";
 import { FaUsersLine } from "react-icons/fa6";
 import { FaHouseChimney } from "react-icons/fa6";
+import { InfinitySpin } from "react-loader-spinner";
 import { Authcontext } from "../AuthProvider/AuthProvider";
 import { getItemFromLS } from "../LocalStorage/localStorage";
 
@@ -39,11 +40,33 @@ const AdminProfile = () => {
 
                 <div className="bookedRoom dashCard">
                     <h1><FaUsersLine></FaUsersLine>Booked(%)</h1>
-                    <p>{((data?.totalBooked / data?.total) * 100).toFixed(2)}%</p>
+                    {
+                        isLoading ?
+                            <InfinitySpin
+                                width='200'
+                                color="#ffffff"
+                            />
+                            :
+
+                            <p>{((data?.totalBooked / data?.total) * 100).toFixed(2)}%</p>
+                    }
                 </div>
                 <div className="roomAvailable dashCard">
                     <h1><FaHouseChimney></FaHouseChimney>Available (%)</h1>
-                    <p>{(((data?.total - data?.totalBooked) / data?.total) * 100).toFixed(2)} %</p>
+
+
+                    {
+                        isLoading ?
+                            <InfinitySpin
+                                width='200'
+                                color="#ffffff"
+                            />
+                            :
+
+                            <p>{(((data?.total - data?.totalBooked) / data?.total) * 100).toFixed(2)} %</p>
+                    }
+
+
                 </div>
 
 
@@ -55,18 +78,50 @@ const AdminProfile = () => {
 
                 <div className="circle totalUser">
                     <p>Users</p>
-                    <h1>{data?.totalUser}</h1>
+                    {
+                        isLoading ?
+                            <InfinitySpin
+                                width='200'
+                                color="#000000"
+                            />
+                            :
+                            <h1>{data?.totalUser}</h1>
+                    }
 
                 </div>
 
                 <div className="circle totalMember">
                     <p>Members</p>
-                    <h1>{data?.totalMember}</h1>
+
+                    {
+                        isLoading ?
+                            <InfinitySpin
+                                width='200'
+                                color="#000000"
+                            />
+                            :
+                            <h1>{data?.totalMember}</h1>
+                    }
+
+
 
                 </div>
                 <div className="circle totalRoom">
                     <p>Room</p>
-                    <h1>{data?.total}</h1>
+
+
+
+                    {
+                        isLoading ?
+                            <InfinitySpin
+                                width='200'
+                                color="#000000"
+                            />
+                            :
+                            <h1>{data?.total}</h1>
+                    }
+
+
 
                 </div>
 

@@ -3,6 +3,7 @@ import Swal from "sweetalert2";
 import UseAxios from "../../Axios/UseAxios";
 import { useQuery } from "@tanstack/react-query";
 import { useContext } from "react";
+import { MdOutlineFileDownloadDone } from "react-icons/md";
 import { Authcontext } from "../../AuthProvider/AuthProvider";
 import { getItemFromLS } from "../../LocalStorage/localStorage";
 
@@ -33,6 +34,11 @@ const Agreements = () => {
         }
 
         catch (err) {
+            Swal.fire({
+                title: "ERROR!",
+                text: "Something Wrong",
+                icon: "error"
+            });
             console.log(err)
         }
 
@@ -44,10 +50,15 @@ const Agreements = () => {
             await axios.put(`/agreement/status?token=${token}&&id=${id}&&role=${role}`)
             await axios.put(`/user/role/update?token=${token}&&email=${email}&&role=${role}`)
             await axios.put(`/apartment/book?token=${token}&&id=${aptID}&&role=${role}`)
+            await axios.put(`/user/booked?token=${token}&&aptID=${aptID}&&role=${role}&&email=${email}`)
+            // set aptid to the userData
+
+
+
             refetch()
             Swal.fire({
-                title: "Rejected!",
-                text: "Agreement request has been rejected",
+                title: "Accecpted!",
+                text: "Agreement request has been accecpted",
                 icon: "success"
             });
         }
@@ -93,8 +104,17 @@ const Agreements = () => {
                                     <td>{item.rent}</td>
                                     <td>{item.date}</td>
                                     <td>
-                                        <button className="reject" onClick={() => handlereject(item._id)}>Reject</button>
-                                        <button className="accecpt" onClick={() => handleAccept(item.userEmail, item._id, item.apartmentID)}>Accecpt</button>
+
+                                        {
+                                            item.status === "checked" ?
+                                                <p className="checked"><MdOutlineFileDownloadDone />Checked</p>
+                                                :
+
+                                                <>
+                                                    <button className="reject" onClick={() => handlereject(item._id)}>Reject</button>
+                                                    <button className="accecpt" onClick={() => handleAccept(item.userEmail, item._id, item.apartmentID)}>Accecpt</button>
+                                                </>
+                                        }
                                     </td>
 
                                 </tr>)

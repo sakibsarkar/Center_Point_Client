@@ -13,18 +13,33 @@ const ManageMembers = () => {
   const { data = [{}] } = useQuery({
     queryKey: ["agreementsReq"],
     queryFn: async () => {
-      const { data: result } = await axios.get(`/agreementReq?token=${token}&&role=${role}`)
+      const { data: result } = await axios.get(`/all/members?token=${token}&&role=${role}`)
       return result
 
     }
   })
 
-  // _id,userName,userEmail,floor_no,block_name,apartment_no,rent,status
+  // _id,email,role,create,timestamp,name,apartment
+
+
+  const handleDeleteMember = async (aptId) => {
+
+    try {
+      await axios.put(`/member/delete?role=${role}&&token=${token}&&email=${data.email}`)
+    }
+
+    catch (err) {
+      console.log(err);
+    }
+
+
+  }
+
 
 
   return (
     <div className="manageMemberCon">
-      <h1>aikhane shokol member der lish dekhano lagbe</h1>
+
       <table>
         <thead>
           <tr>
@@ -39,15 +54,15 @@ const ManageMembers = () => {
           {data.map((user, index) => (
             <tr key={index} className={index % 2 == 0 ? "normalBg" : "colorBg"}>
               <td>{index + 1}</td>
-              <td>{user.userName}</td>
-              <td>{user.userEmail}</td>
-              <td className="deleteCell"><MdDelete />Delete</td>
+              <td>{user.name}</td>
+              <td>{user.email}</td>
+              <td className="deleteCell" onClick={() => handleDeleteMember(user?.apartment, user?.email)}><MdDelete />Delete</td>
             </tr>
           ))}
         </tbody>
       </table>
 
-    </div>
+    </div >
   );
 };
 
