@@ -10,6 +10,7 @@ import { removeItemFromLS } from "../../LocalStorage/localStorage";
 const Nav = () => {
     const { user, logOut, role } = useContext(Authcontext)
     const [show, setShow] = useState(false)
+    const [showLinks, setShowLinks] = useState(false)
     const [profileRoute, setProfileRoute] = useState()
     const handleLogout = async () => {
         try {
@@ -92,7 +93,21 @@ const Nav = () => {
             </div>
 
             <div className="smallDeviceNav">
-                <IoMenu></IoMenu>
+                <IoMenu onClick={() => setShowLinks(!showLinks)}></IoMenu>
+
+                {
+                    showLinks ?
+                        <div className="popUpLinksCon">
+                            <div className="smalluser">
+                                <img src={user?.photoURL} alt="" />
+                            </div>
+                            <Link className="smallLinks" to={"/apartment"}>Apartment</Link>
+                            <Link className="smallLinks" to={profileRoute || "/dashboard"}>Dashboard</Link>
+                            <button onClick={() => handleLogout()}>LogOut</button>
+                        </div>
+
+                        : ""
+                }
             </div>
         </nav>
     );
