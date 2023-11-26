@@ -14,6 +14,7 @@ import ManageCoupon from "../Pages/ManageCoupon/ManageCoupon";
 import ManageMembers from "../Pages/ManageMembers/ManageMembers";
 import MemberProfile from "../Pages/MemberProfile/MemberProfile";
 import MemberRoute from "../PrivateRoute/MemberRoute";
+import PaymentHistory from "../Pages/PaymentHistory/PaymentHistory";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import Signup from "../Pages/Signup/Signup";
 import UserProfile from "../UserProfile/UserProfile";
@@ -89,6 +90,10 @@ export const router = createBrowserRouter([
                 path: "/dashboard/makePayment",
                 element: <MemberRoute><MakePayment /></MemberRoute>
             },
+            {
+                path: "/dashboard/paymentHistory",
+                element: <MemberRoute><PaymentHistory /></MemberRoute>
+            }
 
         ]
     },

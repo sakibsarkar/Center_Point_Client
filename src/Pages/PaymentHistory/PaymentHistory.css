@@ -1,0 +1,31 @@
+.historyCon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 80vh;
+}
+
+.searchCon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    border-bottom: 3px solid #01977a;
+    padding: 0 8px;
+    margin: 0 0 10px 0;
+}
+
+.searchpayment {
+    outline: none;
+    border: none;
+    padding: 5px 0;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+
+.searchpayment::placeholder {
+    color: #989898;
+    font-style: italic;
+}

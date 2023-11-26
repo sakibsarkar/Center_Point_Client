@@ -27,6 +27,7 @@ const Login = () => {
         try {
             await loginWithEmail(email, pass)
             const { data: token } = await axios.post("/user/token", { email: email })
+            
             addtoLS(token)
             navigate(location?.state ? location.state : "/")
         }

@@ -1,0 +1,21 @@
+.couponWrapper {
+    padding: 0 0 100px 0;
+}
+
+.couponCon {
+    display: grid;
+    grid-template-columns: repeat(3, 192px);
+    width: fit-content;
+    margin: 55px auto 0 auto;
+    gap: 30px;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.wrapper img {
+    width: 200px;
+}

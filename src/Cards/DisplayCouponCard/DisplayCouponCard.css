@@ -1,0 +1,32 @@
+.couponCard {
+    width: 180px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px dashed #ff7098;
+    padding: 6px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    position: relative;
+}
+
+.copyBtn {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ff7098;
+    padding: 5px;
+    border-radius: 50%;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.cutIcon {
+    position: absolute;
+    top: -14px;
+    color: #fe7097;
+    left: 25px;
+}

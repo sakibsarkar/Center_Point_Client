@@ -2,6 +2,7 @@ import "./Home.css";
 import AboutSection from "../AboutSection/AboutSection";
 import Banner from "../Banner/Banner";
 import BuildingLocation from "../BuildingLocation/BuildingLocation";
+import DisplayCoupon from "../DisplayCoupon/DisplayCoupon";
 
 const Home = () => {
     return (
@@ -9,6 +10,7 @@ const Home = () => {
             <Banner></Banner>
             <AboutSection></AboutSection>
             <BuildingLocation></BuildingLocation>
+            <DisplayCoupon></DisplayCoupon>
         </>
     );
 };

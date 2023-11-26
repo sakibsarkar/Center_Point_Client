@@ -1,3 +1,12 @@
+.sideBarContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    gap: 32px;
+}
+
 .dashLogo {
     width: fit-content;
 }
@@ -7,6 +16,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    width: 100%;
+    gap: 20px;
 }
 
 .dashBoardLinks .dashLink {

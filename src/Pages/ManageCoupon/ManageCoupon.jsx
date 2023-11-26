@@ -12,6 +12,7 @@ const ManageCoupon = () => {
     const axios = UseAxios()
     const token = getItemFromLS()
     const [show, setShow] = useState(false)
+    const [postLoading, setPostLoading] = useState(false)
 
     const { data, refetch } = useQuery({
         queryKey: ["manageCoupon"],
@@ -50,6 +51,34 @@ const ManageCoupon = () => {
             console.log(err);
         }
     }
+
+
+    const handleAddCoupon = async (e) => {
+        e.preventDefault()
+        if (postLoading) {
+            return
+        }
+        const form = e.target
+        const coupon = form.code.value
+        const value = form.discount.value
+        const description = form.couponDes.value
+
+        const obj = { coupon, value, active: true, description }
+
+        setPostLoading(true)
+        const { data } = await axios.post(`/add/coupon?token=${token}`, obj)
+        refetch()
+        setShow(false)
+        setPostLoading(false)
+        Swal.fire({
+            title: "Successful!",
+            text: "Coupon added",
+            icon: "success"
+        });
+
+
+    }
+
     return (
         <div className="couponMangeCon">
 
@@ -100,10 +129,13 @@ const ManageCoupon = () => {
                     <div className="couponModalCon">
                         <div className="couponModal">
                             <RxCross1 className="closeCouponModal" onClick={() => setShow(false)} />
-                            <form action="">
-                                <input type="text" placeholder="Coupon code" />
-                                <input type="number" placeholder="Discount percentage" />
-                                <textarea name="couponDes" placeholder="Coupon Description"></textarea>
+                            <form onSubmit={handleAddCoupon}>
+                                <input required type="text" placeholder="Coupon code" name="code" />
+                                <input required type="number" placeholder="Discount percentage" name="discount" />
+                                <textarea required name="couponDes" placeholder="Coupon Description" ></textarea>
+                                <button disabled={postLoading ? true : false} type="submit">{
+                                    postLoading ? "Loading..." : "Add"
+                                }</button>
                             </form>
                         </div>
                     </div>

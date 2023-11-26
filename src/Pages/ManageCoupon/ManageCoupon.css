@@ -94,7 +94,6 @@
 
     background-color: rgb(255, 255, 255);
     width: 400px;
-    height: 200px;
     padding: 40px 20px 20px 20px;
     box-shadow: 0 2px 16.8px 3.2px #00264214;
     position: relative;
@@ -139,6 +138,16 @@
     background: #ebebeb;
     border: none;
     color: #040404;
+}
+
+.couponModal form button {
+    width: 100%;
+    padding: 5px 0;
+    border: none;
+    background: #01987a;
+    color: white;
+    font-size: 19px;
+    cursor: pointer;
 }
 
 

@@ -3,6 +3,7 @@ import Swal from "sweetalert2";
 import UseAxios from "../../Axios/UseAxios";
 import { useQuery } from "@tanstack/react-query";
 import { useContext, useState } from "react";
+import { TailSpin } from "react-loader-spinner";
 import { useNavigate } from "react-router-dom";
 import { Authcontext } from "../../AuthProvider/AuthProvider";
 import { getItemFromLS } from "../../LocalStorage/localStorage";
@@ -63,7 +64,16 @@ const MakePayment = () => {
             {
                 isLoading ?
 
-                    ""
+                    <TailSpin
+                        height="80"
+                        width="80"
+                        color="#4fa94d"
+                        ariaLabel="tail-spin-loading"
+                        radius="1"
+                        wrapperStyle={{}}
+                        wrapperClass=""
+                        visible={true}
+                    />
                     :
 
                     <div className="paymentBox">
