@@ -1,6 +1,7 @@
 import "./Nav.css";
 import { useContext, useState } from "react";
 import { IoMdHome, IoMdLogIn } from "react-icons/io";
+import { IoMenu } from "react-icons/io5";
 import { MdApartment } from "react-icons/md";
 import { Link, NavLink } from "react-router-dom";
 import { Authcontext } from "../../AuthProvider/AuthProvider";
@@ -88,6 +89,10 @@ const Nav = () => {
                 </div>
 
 
+            </div>
+
+            <div className="smallDeviceNav">
+                <IoMenu></IoMenu>
             </div>
         </nav>
     );
