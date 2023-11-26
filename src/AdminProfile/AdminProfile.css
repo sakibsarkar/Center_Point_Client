@@ -134,3 +134,148 @@
     border-bottom: 10px solid #5070c2;
     border-left: 10px solid #5070c2;
 }
+
+
+@media screen and (max-width: 465px) {
+    .adminCard {
+        width: 85%;
+    }
+
+    .dashCard {
+        width: 85%;
+    }
+
+    .roomAvailable h1 {
+        font-size: 36px !important;
+    }
+
+    .adminProfileMid {
+        width: 90%;
+        flex-direction: column;
+        height: 550px;
+    }
+
+    .adminProfileTop {
+        flex-wrap: wrap;
+    }
+
+
+
+    #adminShape {
+        display: none;
+    }
+
+    .circle {
+        width: 100px;
+        height: 100px;
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 465px) and (max-width: 640px) {
+    .adminCard {
+        width: 90%;
+    }
+
+    .dashCard {
+        width: 90%;
+    }
+
+    .roomAvailable h1 {
+        font-size: 36px !important;
+    }
+
+    .adminProfileMid {
+        width: 90%;
+    }
+
+    .adminProfileTop {
+        flex-wrap: wrap;
+    }
+
+
+
+    #adminShape {
+        display: none;
+    }
+
+    .circle {
+        width: 100px;
+        height: 100px;
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 640px) and (max-width: 985px) {
+    .adminCard {
+        width: 250px;
+    }
+
+    .dashCard {
+        width: 250px;
+    }
+
+    .roomAvailable h1 {
+        font-size: 36px !important;
+    }
+
+    .adminProfileMid {
+        width: 570px;
+    }
+
+    .adminProfileTop {
+        flex-wrap: wrap;
+    }
+
+    .roomAvailable {
+        width: 571px !important;
+    }
+
+    #adminShape {
+        display: none;
+    }
+
+    .circle {
+        width: 100px;
+        height: 100px;
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 985px) and (max-width: 1350px) {
+    .adminCard {
+        width: 250px;
+    }
+
+    .dashCard {
+        width: 250px;
+    }
+
+    .roomAvailable h1 {
+        font-size: 36px !important;
+    }
+
+    .adminProfileMid {
+        width: 950px;
+    }
+}
+
+@media screen and (min-width: 1350px) and (max-width: 1783px) {
+    .adminCard {
+        width: 300px;
+    }
+
+    .dashCard {
+        width: 300px;
+    }
+
+    .roomAvailable h1 {
+        font-size: 36px !important;
+    }
+
+    .adminProfileMid {
+        width: 1100px;
+    }
+}
+
+@media screen and (min-width: 1921px) {}
