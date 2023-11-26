@@ -114,3 +114,184 @@
     align-items: center;
     width: 100px;
 } */
+
+
+@media screen and (max-width: 400px) {
+
+
+    .buildingInfo h1 {
+        font-size: 35px;
+    }
+
+    .aboutBanner p {
+        width: 98%;
+        text-align: center;
+        font-size: 12px;
+    }
+
+    .buildingImg {
+        display: none;
+    }
+
+    .overflowImg {
+        width: 170px;
+        right: -21px;
+        bottom: -51px;
+
+    }
+
+    .buildingInfo {
+        width: 98%;
+    }
+
+    .aboutContent {
+        flex-direction: column;
+        gap: 76px;
+    }
+
+}
+
+@media screen and (min-width: 400px) and (max-width: 425px) {
+
+
+    .buildingInfo h1 {
+        font-size: 35px;
+    }
+
+    .aboutBanner p {
+        width: 400px;
+        text-align: center;
+        font-size: 12px;
+    }
+
+    .buildingImg {
+        width: 350px;
+        height: 350px;
+    }
+
+    .overflowImg {
+        width: 170px;
+        right: -21px;
+        bottom: -51px;
+
+    }
+
+    .buildingInfo {
+        width: 98%;
+    }
+
+    .aboutContent {
+        flex-direction: column;
+        gap: 76px;
+    }
+
+}
+
+@media screen and (min-width: 425px) and (max-width: 500px) {
+    .aboutBanner p {
+        width: 400px;
+        text-align: center;
+        font-size: 12px;
+    }
+
+    .buildingImg {
+        width: 350px;
+        height: 350px;
+    }
+
+    .overflowImg {
+        width: 170px;
+        right: -21px;
+        bottom: -51px;
+
+    }
+
+    .buildingInfo {
+        width: 400px;
+    }
+
+    .aboutContent {
+        flex-direction: column;
+        gap: 76px;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 590px) {
+    .buildingImg {
+        width: 350px;
+        height: 350px;
+    }
+
+    .overflowImg {
+        width: 170px;
+        right: -44px;
+        bottom: -51px;
+
+    }
+
+    .buildingInfo {
+        width: 400px;
+    }
+
+    .aboutContent {
+        flex-direction: column;
+        gap: 76px;
+    }
+}
+
+@media screen and (min-width: 590px) and (max-width: 1280px) {
+    .buildingImg {
+        width: 500px;
+        height: 500px;
+    }
+
+    .overflowImg {
+        width: 225px;
+        right: -44px;
+        bottom: -51px;
+
+    }
+
+    .buildingInfo {
+        width: 540px;
+    }
+
+    .aboutContent {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media screen and (min-width: 1195px) and (max-width: 1440px) {
+    .buildingImg {
+        width: 500px;
+        height: 500px;
+    }
+
+    .overflowImg {
+        width: 225px;
+        right: -44px;
+        bottom: -51px;
+
+    }
+
+    .buildingInfo {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 1440px) and (max-width: 1700px) {
+    .buildingImg {
+        width: 500px;
+        height: 500px;
+    }
+
+    .overflowImg {
+        width: 225px;
+        right: -44px;
+        bottom: -51px;
+
+    }
+}
+
+@media screen and (min-width: 1921px) {}

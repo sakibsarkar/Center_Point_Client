@@ -94,3 +94,46 @@ footer {
     color: white;
     padding: 15px 0;
 }
+
+
+@media screen and (max-width: 480px) {
+    .socialLinks {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .footerLinks {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .socialLinks .socialLink {
+        width: 20px;
+        height: 20px;
+    }
+
+    .socialLink a {
+        font-size: 20px;
+    }
+
+    .footerLink {
+        font-size: 17px;
+    }
+
+    .footerForm input {
+        width: 90%;
+    }
+
+}
+
+@media screen and (min-width: 480px) and (max-width: 600px) {
+    .socialLinks {
+        gap: 30px;
+    }
+
+    .footerLinks {
+        gap: 30px;
+    }
+}
+
+@media screen and (min-width: 1921px) {}
