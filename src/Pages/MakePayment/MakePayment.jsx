@@ -46,7 +46,7 @@ const MakePayment = () => {
             return
         }
 
-        const payMentObj = { email: data[0]?.email, rent: data[1]?.rent, floor: data[1]?.floor_no, apartment: data[0]?.apartment, block: data[1]?.block_name, billMonth: billMonth }
+        const payMentObj = { email: data[0]?.email, rent: data[1]?.rent, floor: data[1]?.floor_no, apartment: data[0]?.apartment, block: data[1]?.block_name, billMonth: billMonth, flatNumber: data[1]?.apartment_no }
         setPaymentObject(payMentObj)
         navigate("/payment")
     }

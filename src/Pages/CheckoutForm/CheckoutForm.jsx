@@ -7,10 +7,14 @@ import { TbFidgetSpinner } from "react-icons/tb";
 import { ThreeDots } from "react-loader-spinner";
 import { useNavigate } from "react-router-dom";
 import { Authcontext } from "../../AuthProvider/AuthProvider";
+import { getItemFromLS } from "../../LocalStorage/localStorage";
 
 const CheckoutForm = () => {
 
     const { paymentObject } = useContext(Authcontext)
+    const token = getItemFromLS()
+    const today = new Date()
+
 
     const navigate = useNavigate()
     const stripe = useStripe()
@@ -21,6 +25,8 @@ const CheckoutForm = () => {
     const [paymentLoading, setPaymentLoading] = useState(false)
 
     const couponRef = useRef(null)
+
+    const year = new Date().getFullYear()
 
 
     if (Object.keys(paymentObject).length === 0) {
@@ -144,12 +150,18 @@ const CheckoutForm = () => {
         }
 
         if (paymentIntent.status === "succeeded") {
+            const { email, rent, floor, apartment, flatNumber, block, billMonth } = paymentObject
+            const paymentHistory = { email, rent, flatNumber, billMonth, trId: paymentIntent.id, billYear: year, paidOn: today }
+            const post = await axios.post(`/payment/history?token=${token}`, paymentHistory)
             Swal.fire({
                 title: "Success",
                 text: "successfully paid",
                 icon: "success"
             });
+
         }
+
+        console.log(paymentIntent);
 
         setPaymentLoading(false)
     }
