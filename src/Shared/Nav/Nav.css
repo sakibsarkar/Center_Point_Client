@@ -197,6 +197,12 @@ nav {
 }
 
 
+
+.miniActive {
+    text-decoration: underline;
+}
+
+
 .popUpLinksCon {
     width: 200px;
     position: absolute;

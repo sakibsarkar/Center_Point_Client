@@ -101,13 +101,17 @@ const Nav = () => {
                             <div className="smalluser">
                                 <img src={user?.photoURL} alt="" />
                             </div>
-                            <Link className="smallLinks" to={"/apartment"}>Apartment</Link>
-                            <Link className="smallLinks" to={profileRoute || "/dashboard"}>Dashboard</Link>
+                            <NavLink className={({ isActive }) => isActive ? "smallLinks miniActive" : "smallLinks"} to={"/apartment"}>Apartment</NavLink>
+                            <NavLink className={({ isActive }) => isActive ? "smallLinks miniActive" : "smallLinks"} to={profileRoute || "/dashboard"}>Dashboard</NavLink>
+                            <NavLink to={"/"} className={({ isActive }) => isActive ? "smallLinks miniActive" : "smallLinks"}>
+                                Home
+                            </NavLink>
                             <button onClick={() => handleLogout()}>LogOut</button>
                         </div>
 
                         : ""
                 }
+              
             </div>
         </nav>
     );

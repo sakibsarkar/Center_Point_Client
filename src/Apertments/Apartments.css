@@ -42,3 +42,29 @@
     border-radius: 50%;
     cursor: pointer;
 }
+
+
+
+@media screen and (max-width: 400px) {
+    .apartmentsCards {
+        grid-template-columns: repeat(1, 350px);
+    }
+}
+
+@media screen and (min-width: 401px) and (max-width: 720px) {}
+
+@media screen and (min-width: 721px) and (max-width: 1280px) {}
+
+@media screen and (min-width: 400px) and (max-width: 745px) {
+    .apartmentsCards {
+        grid-template-columns: repeat(1, 350px);
+    }
+}
+
+@media screen and (min-width: 745px) and (max-width: 1117px) {
+    .apartmentsCards {
+        grid-template-columns: repeat(2, 350px);
+    }
+}
+
+@media screen and (min-width: 1921px) {}
