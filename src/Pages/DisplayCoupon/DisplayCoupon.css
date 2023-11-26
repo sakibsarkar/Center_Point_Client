@@ -19,3 +19,17 @@
 .wrapper img {
     width: 200px;
 }
+
+@media screen and (max-width: 440px) {
+    .couponCon {
+        grid-template-columns: repeat(1, 332px);
+    }
+}
+
+@media screen and (min-width: 440px) and (max-width: 670px) {
+    .couponCon {
+        grid-template-columns: repeat(2, 192px);
+    }
+}
+
+@media screen and (min-width: 1921px) {}

@@ -30,3 +30,10 @@
     color: #fe7097;
     left: 25px;
 }
+
+
+@media screen and (max-width: 440px) {
+    .couponCard {
+        width: 300px;
+    }
+}
