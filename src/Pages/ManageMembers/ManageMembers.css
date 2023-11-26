@@ -4,6 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow-y: auto;
 }
 
 .manageMemberCon table {
@@ -49,3 +50,31 @@
 .deleteCell {
     color: red;
 }
+
+@media screen and (max-width: 400px) {}
+
+@media screen and (min-width: 401px) and (max-width: 720px) {}
+
+@media screen and (min-width: 721px) and (max-width: 1280px) {}
+
+@media screen and (min-width: 400px) and (max-width: 550px) {
+    .manageMemberCon table {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 550px) and (max-width: 715px) {
+    .manageMemberCon table {
+        width: 540px;
+    }
+
+    .normalBg {
+        font-size: 13px;
+    }
+
+    .colorBg {
+        font-size: 13px;
+    }
+}
+
+@media screen and (min-width: 1921px) {}
