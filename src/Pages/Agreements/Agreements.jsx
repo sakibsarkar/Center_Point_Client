@@ -88,12 +88,13 @@ const Agreements = () => {
                         <thead>
                             <tr>
                                 <th>UserName</th>
-                                <th>UserEmail</th>
+                                <th className="agreementEmail">UserEmail</th>
                                 <th>Floor</th>
-                                <th>Block</th>
-                                <th>Apartment No</th>
+                                <th className="agreementBlock">Block</th>
+                                <th className="apartmentNO">Apartment No</th>
+                                <th className="aptNo">Apt. No</th>
                                 <th>Rent</th>
-                                <th>Date</th>
+                                <th className="agreementDate">Date</th>
                                 <th>Action</th>
                             </tr>
 
@@ -104,12 +105,13 @@ const Agreements = () => {
                                 data?.map((item, index) => <tr key={index} className={index % 2 == 0 ? "normalRow" : "colorRow"}>
 
                                     <td>{item.userName}</td>
-                                    <td>{item.userEmail}</td>
+                                    <td className="agreementEmail">{item.userEmail}</td>
                                     <td>{item.floor_no}</td>
-                                    <td>{item.block_name}</td>
-                                    <td>{item.apartment_no}</td>
+                                    <td className="agreementBlock">{item.block_name}</td>
+                                    <td className="apartmentNO">{item.apartment_no}</td>
+                                    <td className="aptNo">{item.apartment_no}</td>
                                     <td>{item.rent}</td>
-                                    <td>{item.date}</td>
+                                    <td className="agreementDate">{item.date}</td>
                                     <td>
 
                                         {

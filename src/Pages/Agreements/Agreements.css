@@ -65,3 +65,99 @@
     color: #00b08d;
     font-weight: 500;
 }
+
+.aptNo {
+    display: none;
+}
+
+
+@media screen and (max-width: 400px) {
+    .agreementReqCon table {
+        width: 100%;
+    }
+
+    .agreementBlock {
+        display: none;
+    }
+
+    .agreementReqCon {
+        width: 97%;
+        margin: auto;
+    }
+
+    .agreementEmail {
+        display: none;
+    }
+
+    .agreementDate {
+        display: none;
+    }
+
+    .apartmentNO {
+        display: none;
+    }
+
+    .aptNo {
+        display: inline-block;
+    }
+
+
+    .agreementReqCon td {
+        padding: 4px;
+        font-size: 13px;
+    }
+
+    .agreementReqCon th {
+        padding: 4px;
+        font-size: 13px;
+    }
+
+}
+
+
+
+@media screen and (min-width: 400px) and (max-width: 1015px) {
+
+    .agreementReqCon table {
+        width: 100%;
+    }
+
+    .agreementBlock {
+        display: none;
+    }
+
+    .agreementReqCon {
+        width: 97%;
+        margin: auto;
+    }
+
+    .agreementEmail {
+        display: none;
+    }
+
+    .agreementDate {
+        display: none;
+    }
+
+    .apartmentNO {
+        display: none;
+    }
+
+    .aptNo {
+        display: inline-block;
+    }
+
+
+    .agreementReqCon td {
+        padding: 4px;
+        font-size: 13px;
+    }
+
+    .agreementReqCon th {
+        padding: 4px;
+        font-size: 13px;
+    }
+
+}
+
+@media screen and (min-width: 1921px) {}
