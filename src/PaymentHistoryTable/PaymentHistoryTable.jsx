@@ -13,7 +13,7 @@ const PaymentHistoryTable = ({ history, index, searchValue }) => {
                     <tbody className={billMonth.toLowerCase().includes(searchValue) ? "" : "hide"}>
                         <tr className={index % 2 == 0 ? "row" : "row oddrow"} >
                             <td>{index + 1}</td>
-                            <td>{email}</td>
+                            <td className="paymentEmail">{email}</td>
                             <td>{billMonth}</td>
                             <td>${rent}</td>
                             <td>${trId}</td>
@@ -25,7 +25,7 @@ const PaymentHistoryTable = ({ history, index, searchValue }) => {
                     <tbody>
                         <tr className={index % 2 == 0 ? "row" : "row oddrow"} >
                             <td>{index + 1}</td>
-                            <td>{email}</td>
+                            <td className="paymentEmail">{email}</td>
                             <td>{billMonth}</td>
                             <td>${rent}</td>
                             <td>${trId}</td>

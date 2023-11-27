@@ -43,7 +43,7 @@ const PaymentHistory = () => {
                         <thead>
                             <tr>
                                 <th>Sl.</th>
-                                <th>Email</th>
+                                <th className="paymentEmail">Email</th>
                                 <th>Month</th>
                                 <th>Amount</th>
                                 <th>Transaction ID</th>
