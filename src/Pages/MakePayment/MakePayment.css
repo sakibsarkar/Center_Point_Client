@@ -77,3 +77,60 @@
     background-color: rgb(51, 153, 104);
     width: 96%;
 }
+
+
+@media screen and (max-width: 400px) {
+    .paymentBox img {
+        display: none;
+    }
+
+    .paymentBox {
+        padding: 0;
+    }
+
+    .paymentDetails {
+        width: 85%;
+    }
+
+    .paymentDetails .brother select {
+        width: 70%;
+    }
+
+    .cardPaymentContainer>h1 {
+        width: 90%;
+        text-align: center;
+        font-size: 24px;
+    }
+
+
+}
+
+@media screen and (min-width: 475px) and (max-width: 580px) {
+    .paymentBox img {
+        display: none;
+    }
+
+    .paymentBox {
+        padding: 0;
+    }
+
+    .paymentDetails {
+        width: 85%;
+    }
+
+    .paymentDetails .brother select {
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 580px) and (max-width: 1557px) {
+    .paymentBox img {
+        display: none;
+    }
+
+    .paymentBox {
+        padding: 0;
+    }
+}
+
+@media screen and (min-width: 1921px) {}

@@ -218,6 +218,24 @@ nav {
     box-shadow: 0 2px 16.8px 3.2px #4a4a4a4f;
 }
 
+.popUpLinksCon button {
+    border: none;
+    background: #ff2662;
+    color: white;
+    padding: 5px 6px;
+    font-size: 16px;
+    margin: 25px 0 0 0;
+}
+
+
+
+.smallLogin {
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 @media screen and (max-width: 600px) {
     .navWrapper {

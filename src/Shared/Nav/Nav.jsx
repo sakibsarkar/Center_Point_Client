@@ -114,14 +114,27 @@ const Nav = () => {
                 {
                     showLinks ?
                         <div className="popUpLinksCon">
-                            <div className="smalluser">
-                                <img src={user?.photoURL} alt="" />
-                            </div>
+                            {
+                                user ?
+                                    <div className="smalluser">
+                                        <img src={user?.photoURL} alt="" />
+                                    </div>
+                                    : ""
+                            }
                             <NavLink className={({ isActive }) => isActive ? "smallLinks miniActive" : "smallLinks"} to={"/apartment"}>Apartment</NavLink>
                             <NavLink className={({ isActive }) => isActive ? "smallLinks miniActive" : "smallLinks"} to={profileRoute || "/dashboard"}>Dashboard</NavLink>
                             <NavLink to={"/"} className={({ isActive }) => isActive ? "smallLinks miniActive" : "smallLinks"}>
                                 Home
                             </NavLink>
+
+                            {
+                                user ?
+                                    "" :
+                                    <Link className="smallLogin" to={"/login"}>
+                                        <IoMdLogIn></IoMdLogIn>
+                                        <p>LogIn</p>
+                                    </Link>
+                            }
                             <button onClick={() => handleLogout()}>LogOut</button>
                         </div>
 

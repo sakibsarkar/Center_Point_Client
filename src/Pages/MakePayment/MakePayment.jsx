@@ -85,7 +85,7 @@ const MakePayment = () => {
                             <div className="brother">
                                 <input type="text" readOnly defaultValue={`Floor : ${data[1]?.floor_no}`} />
                                 <input type="text" readOnly defaultValue={`Block : ${data[1]?.block_name}`} />
-                                <input type="text" readOnly defaultValue={`Apartment : ${data[1]?.apartment_no}`} />
+                                <input type="text" readOnly defaultValue={`Apt. No : ${data[1]?.apartment_no}`} />
                             </div>
                             <div className="brother">
                                 <input type="text" readOnly defaultValue={`Rent : ${data[1]?.rent}$`} />
