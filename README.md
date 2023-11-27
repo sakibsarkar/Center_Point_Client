@@ -1,8 +1,18 @@
-# React + Vite
+# Assignment -12
+## Live link - [Center poin](https://assignment-12-65a07.web.app/)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### About this project
 
-Currently, two official plugins are available:
+This web application serves as a comprehensive solution for efficiently managing a building in Gulshan, Dhaka. It simplifies various aspects of property management, providing features that enhance communication, facilitate agreements, and streamline the overall administration of the building
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Features
+
+- Responsive Design
+- User-Centric Dashboard
+- Announcement System.
+- Coupon Management
+- Secure Payment Processing
+- while creating account user must have to use strong password
+- Role based Dashboard
+## 
+    
