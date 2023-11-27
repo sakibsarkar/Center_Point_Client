@@ -9,6 +9,35 @@
 
 .announcementCardCon {
     display: grid;
-    grid-template-columns: repeat(3, 327px);
+    grid-template-columns: repeat(3, 337px);
     gap: 20px;
 }
+
+
+@media screen and (max-width: 400px) {
+    .announcementCardCon {
+
+        grid-template-columns: repeat(1, 337px);
+
+    }
+}
+
+
+@media screen and (min-width: 400px) and (max-width: 717px) {
+    .announcementCardCon {
+
+        grid-template-columns: repeat(1, 337px);
+
+    }
+}
+
+@media screen and (min-width: 717px) and (max-width: 1270px) {
+    .announcementCardCon {
+
+        grid-template-columns: repeat(2, 337px);
+
+    }
+
+}
+
+@media screen and (min-width: 1921px) {}
