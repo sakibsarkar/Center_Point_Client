@@ -19,7 +19,7 @@ const Announcements = () => {
         <div className="announcementCon">
             <div className="announcementCardCon">
                 {
-                    data?.reverse().map(ann => <AnnouncementCard key={ann._id} data={ann}></AnnouncementCard>)
+                    data?.map(ann => <AnnouncementCard key={ann._id} data={ann}></AnnouncementCard>)
                 }
             </div>
         </div>

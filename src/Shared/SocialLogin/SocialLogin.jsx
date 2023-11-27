@@ -8,7 +8,7 @@ import { Authcontext } from "../../AuthProvider/AuthProvider";
 import { addtoLS } from "../../LocalStorage/localStorage";
 
 const SocialLogin = ({ marginT = 0 }) => {
-    const { googleAuthentication, gitHubAuthentication, user, naviGateLocation } = useContext(Authcontext)
+    const { googleAuthentication, gitHubAuthentication, user, naviGateLocation, setWaitForUser, waitForUser } = useContext(Authcontext)
 
     const axios = UseAxios()
     const navigate = useNavigate()
@@ -21,6 +21,8 @@ const SocialLogin = ({ marginT = 0 }) => {
         const userData = { email: user?.email, role: "user", name: user?.displayName, apartment: "", agreementDate: "" }
         const { data: up } = await axios.put(`/add/user/${user?.email}`, userData)
 
+
+        setWaitForUser(!waitForUser)
         navigate(adress)
 
     }
