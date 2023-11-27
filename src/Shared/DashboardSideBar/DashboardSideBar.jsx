@@ -17,7 +17,7 @@ const DashboardSideBar = () => {
     return (
 
         <div className="sideBarContent">
-            <Link className="logo dashLogo">
+            <Link className="logo dashLogo" to={"/"}>
                 <img src="https://i.ibb.co/fFF1qFC/Building-Construction-Logo-template-removebg-preview.png" alt="" />
                 <p>Center <br /> <span>Point</span></p>
             </Link>

@@ -9,7 +9,7 @@ import { Authcontext } from "../../AuthProvider/AuthProvider";
 import { addtoLS } from "../../LocalStorage/localStorage";
 
 const Login = () => {
-    const { loginWithEmail, setNaviGateLocation, logOut, user } = useContext(Authcontext)
+    const { loginWithEmail, setNaviGateLocation, logOut, user, setWaitForUser, waitForUser } = useContext(Authcontext)
     const location = useLocation()
     setNaviGateLocation(location)
 
@@ -27,7 +27,7 @@ const Login = () => {
         try {
             await loginWithEmail(email, pass)
             const { data: token } = await axios.post("/user/token", { email: email })
-
+            setWaitForUser(!waitForUser)
             addtoLS(token)
             navigate(location?.state ? location.state : "/")
         }
