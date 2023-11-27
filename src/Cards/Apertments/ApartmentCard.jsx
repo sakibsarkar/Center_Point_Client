@@ -1,6 +1,7 @@
 import "./ApartmentCard.css";
 import Swal from "sweetalert2";
 import UseAxios from "../../Axios/UseAxios";
+import { motion } from "framer-motion";
 import { useContext } from "react";
 import { BsCalendar2WeekFill } from "react-icons/bs";
 import { GrMoney } from "react-icons/gr";
@@ -66,7 +67,8 @@ const ApartmentCard = ({ data }) => {
     }
 
     return (
-        <div className="card">
+        // <div className="card">
+        <motion.div className="card" animate={{ scale: 1 }} initial={{ scale: 0 }} transition={{ delay: 0.8, duration: 0.4 }}>
             <div className="apartmenImg">
                 <img className="appImg" src={image} alt="" />
             </div>
@@ -81,8 +83,8 @@ const ApartmentCard = ({ data }) => {
             <div className="agreementBtn">
                 <button onClick={handleAgreement}>Agreement</button>
             </div>
-
-        </div>
+        </motion.div>
+        /* </div> */
     );
 };
 

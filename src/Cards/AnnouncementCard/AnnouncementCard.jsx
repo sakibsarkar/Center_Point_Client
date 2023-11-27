@@ -32,7 +32,7 @@ const AnnouncementCard = ({ data }) => {
 
                 {
                     description?.length > 55 ?
-                        <p>${description.slice(0, 56)} <span className="seemore">...see more</span></p> :
+                        <p>{description.slice(0, 56)} <span className="seemore">...see more</span></p> :
                         <p>{description}</p>
                 }
 
