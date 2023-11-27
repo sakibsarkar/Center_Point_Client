@@ -41,6 +41,22 @@ const Nav = () => {
     }
 
 
+
+
+    const smallDeviceNav = () => {
+        setShowLinks(!showLinks)
+        if (role === "admin") {
+            return setProfileRoute("/dashboard/adminProfile")
+        }
+        if (role === "user") {
+            return setProfileRoute("/dashboard/profile")
+        }
+        if (role === "member") {
+            return setProfileRoute("/dashboard/memberProfile")
+        }
+    }
+
+
     return (
         <nav>
             <div className="navWrapper">
@@ -93,7 +109,7 @@ const Nav = () => {
             </div>
 
             <div className="smallDeviceNav">
-                <IoMenu onClick={() => setShowLinks(!showLinks)}></IoMenu>
+                <IoMenu onClick={() => smallDeviceNav()}></IoMenu>
 
                 {
                     showLinks ?

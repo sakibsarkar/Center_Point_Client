@@ -44,33 +44,47 @@ const ManageMembers = () => {
   }
 
 
+  console.log(data);
+
 
   return (
-    <div className="manageMemberCon">
+    <>
 
-      <table>
-        <thead>
-          <tr>
-            <th>Sl.</th>
-            <th>User Name</th>
-            <th>User Email</th>
-            <th>Action</th>
-          </tr>
-        </thead>
+      {
+        data?.length > 0 ?
+          <div className="manageMemberCon">
 
-        <tbody>
-          {data.map((user, index) => (
-            <tr key={index} className={index % 2 == 0 ? "normalBg" : "colorBg"}>
-              <td>{index + 1}</td>
-              <td>{user.name}</td>
-              <td>{user.email}</td>
-              <td className="deleteCell" onClick={() => handleDeleteMember(user?.apartment, user?.email)}><MdDelete />Delete</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+            <table>
+              <thead>
+                <tr>
+                  <th className="slBlock">Sl.</th>
+                  <th>User Name</th>
+                  <th>User Email</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
 
-    </div >
+              <tbody>
+                {data.map((user, index) => (
+                  <tr key={index} className={index % 2 == 0 ? "normalBg" : "colorBg"}>
+                    <td className="slBlock">{index + 1}</td>
+                    <td>{user.name}</td>
+                    <td>{user.email}</td>
+                    <td className="deleteCell" onClick={() => handleDeleteMember(user?.apartment, user?.email)}><MdDelete />Delete</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+
+          </div >
+          :
+          <div className="noMember">
+            <img src="https://i.ibb.co/VSpbWyL/Getty-Images-1265041897.webp" alt="" />
+            <h1>No member available</h1>
+          </div>
+      }
+
+    </>
   );
 };
 
