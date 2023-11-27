@@ -88,7 +88,11 @@ const Nav = () => {
                                     show ?
                                         <div className="userModal">
                                             <h3>{user?.displayName}</h3>
+
+
                                             <Link to={profileRoute || "/dashboard"}>Dashboard</Link>
+
+
                                             <Link to={profileRoute || "/"}>Profile</Link>
                                             <button onClick={() => handleLogout()}>LogOut</button>
                                         </div>
@@ -122,7 +126,20 @@ const Nav = () => {
                                     : ""
                             }
                             <NavLink className={({ isActive }) => isActive ? "smallLinks miniActive" : "smallLinks"} to={"/apartment"}>Apartment</NavLink>
-                            <NavLink className={({ isActive }) => isActive ? "smallLinks miniActive" : "smallLinks"} to={profileRoute || "/dashboard"}>Dashboard</NavLink>
+
+
+                            {
+                                user ? 
+                                <NavLink className={({ isActive }) => isActive ? "smallLinks miniActive" : "smallLinks"} to={profileRoute || "/dashboard"}>Dashboard</NavLink> 
+                               
+                               
+                                : 
+                               
+                               
+                                ""
+                            }
+
+
                             <NavLink to={"/"} className={({ isActive }) => isActive ? "smallLinks miniActive" : "smallLinks"}>
                                 Home
                             </NavLink>

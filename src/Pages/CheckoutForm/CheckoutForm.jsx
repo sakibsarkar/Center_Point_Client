@@ -79,7 +79,7 @@ const CheckoutForm = () => {
                 title: "Successfuly coupon added",
                 text: "",
                 icon: "success"
-            });
+            })
 
             setIsCouponUsed(true)
         }
@@ -154,14 +154,22 @@ const CheckoutForm = () => {
             const paymentHistory = { email, rent, flatNumber, billMonth, trId: paymentIntent.id, billYear: year, paidOn: today }
             const post = await axios.post(`/payment/history?token=${token}`, paymentHistory)
             Swal.fire({
-                title: "Success",
-                text: "successfully paid",
-                icon: "success"
-            });
+                title: "Payment successful",
+                showDenyButton: true,
+                confirmButtonText: "Ok",
+                denyButtonText: `Go to Home`
+            }).then(result => {
+                if (result.isConfirmed) {
+                    navigate("/")
+                }
+                else {
+                    navigate("/")
+                }
+            })
 
         }
 
-        console.log(paymentIntent);
+
 
         setPaymentLoading(false)
     }
