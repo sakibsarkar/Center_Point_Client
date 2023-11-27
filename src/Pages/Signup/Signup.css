@@ -86,3 +86,13 @@
     font-size: 11px;
     color: red;
 }
+
+
+@media screen and (max-width: 455px) {
+    .signUpForm {
+        width: 90%;
+        padding: 35px 10px;
+    }
+}
+
+@media screen and (min-width: 1921px) {}

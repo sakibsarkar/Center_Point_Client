@@ -29,7 +29,13 @@ const AnnouncementCard = ({ data }) => {
                     <HiOutlineBellAlert />
                 </div>
                 <h1>{title}</h1>
-                <p>{description.length > 55 ? `${description.slice(0, 56)}...see more` : description}</p>
+
+                {
+                    description?.length > 55 ?
+                        <p>${description.slice(0, 56)} <span className="seemore">...see more</span></p> :
+                        <p>{description}</p>
+                }
+
                 <p>{date}</p>
             </div>
 

@@ -56,6 +56,7 @@ const DashboardSideBar = () => {
                             <NavLink className={"dashLink"} to={"/dashboard/memberProfile"}><FaUserLock />My profile</NavLink>
                             <NavLink className={"dashLink"} to={"/dashboard/makePayment"}><MdOutlinePayments />Make Payment</NavLink>
                             <NavLink className={"dashLink"} to={"/dashboard/paymentHistory"}><BsClockHistory />Payment History</NavLink>
+                            <NavLink className={"dashLink"} to={"/dashboard/announcements"}><MdOutlineNotificationImportant />Announcements</NavLink>
 
                         </>
                         : ""

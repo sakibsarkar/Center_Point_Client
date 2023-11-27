@@ -9,7 +9,7 @@ import { Authcontext } from "../../AuthProvider/AuthProvider";
 import { addtoLS } from "../../LocalStorage/localStorage";
 
 const Login = () => {
-    const { loginWithEmail, setNaviGateLocation } = useContext(Authcontext)
+    const { loginWithEmail, setNaviGateLocation, logOut, user } = useContext(Authcontext)
     const location = useLocation()
     setNaviGateLocation(location)
 
@@ -27,11 +27,24 @@ const Login = () => {
         try {
             await loginWithEmail(email, pass)
             const { data: token } = await axios.post("/user/token", { email: email })
-            
+
             addtoLS(token)
             navigate(location?.state ? location.state : "/")
         }
         catch (err) {
+
+
+            if (user) {
+                await logOut()
+                Swal.fire({
+                    icon: "error",
+                    title: "opps..",
+                    text: "something went wrong",
+                    footer: '<a href="#">Why do I have this issue?</a>'
+                });
+                return
+            }
+
             Swal.fire({
                 icon: "error",
                 title: "opps..",

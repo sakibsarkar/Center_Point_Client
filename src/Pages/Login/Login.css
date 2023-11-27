@@ -63,3 +63,30 @@
     font-size: 19px;
     cursor: pointer;
 }
+
+
+@media screen and (max-width: 455px) {
+    .logInBox {
+        width: 90%;
+        padding: 10px;
+        border-radius: 10px;
+        justify-content: center;
+    }
+
+    .logInLeftSide {
+        display: none;
+    }
+}
+
+@media screen and (min-width:455px) and (max-width: 827px) {
+    .logInBox {
+        width: fit-content;
+        justify-content: center;
+    }
+
+    .logInLeftSide {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1921px) {}

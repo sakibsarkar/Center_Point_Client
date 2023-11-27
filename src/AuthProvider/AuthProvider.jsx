@@ -57,7 +57,7 @@ const AuthProvider = ({ children }) => {
             setUser(USER)
 
             if (USER) {
-                axios.get(`http://localhost:5000/api/user/role?token=${token}&&email=${USER?.email}`)
+                axios.get(`https://assignment-12-server-five-rosy.vercel.app/api/user/role?token=${token}&&email=${USER?.email}`)
                     .then(({ data }) => {
 
                         setRole(data?.role)
