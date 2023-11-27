@@ -61,3 +61,35 @@
     margin: auto;
 
 }
+
+
+
+@media screen and (max-width: 400px) {
+    .anccImg {
+        display: none;
+    }
+
+    .announceMentCon form {
+        width: 90%;
+    }
+}
+
+
+
+@media screen and (min-width: 400px) and (max-width: 510px) {
+    .anccImg {
+        display: none;
+    }
+
+    .announceMentCon form {
+        width: 90%;
+    }
+}
+
+@media screen and (min-width: 510px) and (max-width: 1400px) {
+    .anccImg {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1921px) {}

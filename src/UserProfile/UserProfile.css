@@ -94,3 +94,109 @@
     top: -104px;
     right: -84px;
 }
+
+
+@media screen and (max-width: 400px) {
+    .profileCard {
+        width: 90%;
+
+    }
+
+    .profileTop {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+
+    .accountActivity .profileLogout {
+        display: none;
+    }
+
+    .shape {
+        display: none;
+    }
+
+    .profileImgBox {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profileBottom {
+        align-items: flex-end;
+    }
+
+    .updateProfile {
+        display: none;
+    }
+
+    .profileInfo h1 {
+        color: #fd1958;
+    }
+
+    .profileInfo p {
+        color: #fd1958;
+    }
+}
+
+@media screen and (min-width: 400px) and (max-width: 520px) {
+    .profileCard {
+        width: 90%;
+    }
+
+    .shape {
+        display: none;
+    }
+
+    .profileImgBox {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profileBottom {
+        align-items: flex-end;
+    }
+
+    .updateProfile {
+        display: none;
+    }
+
+    .profileInfo h1 {
+        color: #fd1958;
+    }
+
+    .profileInfo p {
+        color: #fd1958;
+    }
+}
+
+@media screen and (min-width: 520px) and (max-width: 667px) {
+    .profileCard {
+        width: 90%;
+    }
+
+    .shape {
+        width: 400px;
+        height: 371px;
+    }
+
+    .profileImgBox {
+        width: 150px;
+        height: 150px;
+    }
+
+    .profileBottom {
+        align-items: flex-end;
+    }
+
+    .updateProfile {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 667px) and (max-width: 930px) {
+    .profileCard {
+        width: 90%;
+    }
+}
+
+@media screen and (min-width: 1921px) {}

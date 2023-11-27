@@ -72,7 +72,7 @@ const UserProfile = ({ data }) => {
 
                     <div className="accountActivity">
                         <button className="profileLogout" onClick={() => handleLogout()}>Log out</button>
-                        <button>Upate Profile</button>
+                        <button className="updateProfile">Upate Profile</button>
                     </div>
                 </div>
 
