@@ -5,6 +5,7 @@ import Announcements from "../Pages/Announcements/Announcements";
 import Apartments from "../Apertments/Apartments";
 import Checkout from "../Pages/Checkout/Checkout";
 import DashboardLayout from "../Layout/DashboardLayout";
+import ErrorPage from "../ErrorPage/ErrorPage";
 import Home from "../Pages/Home/Home";
 import Login from "../Pages/Login/Login";
 import MainLayout from "../Layout/mainLayout";
@@ -24,6 +25,7 @@ export const router = createBrowserRouter([
     {
         path: "/",
         element: <MainLayout></MainLayout>,
+        errorElement: <ErrorPage></ErrorPage>,
         children: [
 
             {

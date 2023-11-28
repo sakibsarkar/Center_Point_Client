@@ -1,12 +1,15 @@
 import "./DashoboardLayout.css";
 import DashboardSideBar from "../Shared/DashboardSideBar/DashboardSideBar";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { IoMenuSharp } from "react-icons/io5";
 import { RxCross2 } from "react-icons/rx";
 import { Outlet } from "react-router-dom";
+import { Authcontext } from "../AuthProvider/AuthProvider";
 
 const DashboardLayout = () => {
     const [showSidebar, setShowSidebar] = useState(false)
+    const { setWaitForUser, waitForUser } = useContext(Authcontext)
+    setWaitForUser(!waitForUser)
     return (
         <div className="dashCon">
 

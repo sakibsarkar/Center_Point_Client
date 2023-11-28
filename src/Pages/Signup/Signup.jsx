@@ -6,6 +6,7 @@ import UseAxios from "../../Axios/UseAxios";
 import { updateProfile } from "firebase/auth";
 import { useContext, useState } from "react";
 import { FaImages } from "react-icons/fa";
+import { ImSpinner9 } from "react-icons/im";
 import { Link, useNavigate } from "react-router-dom";
 import { Authcontext } from "../../AuthProvider/AuthProvider";
 import { addtoLS } from "../../LocalStorage/localStorage";
@@ -15,6 +16,7 @@ const Signup = ({ location }) => {
 
     const [imgName, setImgName] = useState("Choose your photo")
     const [error, setError] = useState("")
+    const [registerLoading, setRegisterLoading] = useState(false)
 
 
     const { createAccountWithEmail, naviGateLocation, waitForUser, setWaitForUser } = useContext(Authcontext)
@@ -57,12 +59,12 @@ const Signup = ({ location }) => {
         }
 
         if (!capital.test(password)) {
-           
+
             return setError("* A capital letter required")
         }
 
         if (!special.test(password)) {
-        
+
             return setError("* A special character required")
             // return toast.error("password should contain atleast r")
         }
@@ -73,6 +75,7 @@ const Signup = ({ location }) => {
         }
         try {
             setError("")
+            setRegisterLoading(true)
             const { data } = await uploadImage(image)
             // console.log(data.display_url);
 
@@ -90,10 +93,17 @@ const Signup = ({ location }) => {
 
             const { data: up } = await axios.put(`/add/user/${email}`, userData)
             setWaitForUser(!waitForUser)
+            setRegisterLoading(false)
+            Swal.fire({
+                title: "register  successful",
+                text: "",
+                icon: "success"
+            });
             navigate(address)
         }
 
         catch (err) {
+            setRegisterLoading(false)
             Swal.fire({
                 icon: "error",
                 title: "Oops...",
@@ -128,7 +138,7 @@ const Signup = ({ location }) => {
                 <p className="passError">{error}</p>
                 <input spellCheck={false} placeholder="Confirm Your Password" type="password" name="confirm" required />
 
-                <button>Sign Up</button>
+                <button>{registerLoading ? <ImSpinner9 className="spinner"></ImSpinner9> : "Sign up"}</button>
 
                 <SocialLogin marginT={33}></SocialLogin>
             </form>

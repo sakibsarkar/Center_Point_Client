@@ -4,11 +4,16 @@ import Swal from "sweetalert2";
 import UseAxios from "../../Axios/UseAxios";
 import { TextField } from "@mui/material";
 import { useContext, useState } from "react";
+import { ImSpinner9 } from "react-icons/im";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Authcontext } from "../../AuthProvider/AuthProvider";
 import { addtoLS } from "../../LocalStorage/localStorage";
 
 const Login = () => {
+
+
+    const [loginLoading, setLoginLoading] = useState(false)
+
     const { loginWithEmail, setNaviGateLocation, logOut, user, setWaitForUser, waitForUser } = useContext(Authcontext)
     const location = useLocation()
     setNaviGateLocation(location)
@@ -25,13 +30,21 @@ const Login = () => {
         const pass = form.password.value
 
         try {
+            setLoginLoading(true)
             await loginWithEmail(email, pass)
             const { data: token } = await axios.post("/user/token", { email: email })
             setWaitForUser(!waitForUser)
             addtoLS(token)
+            setLoginLoading(false)
+            Swal.fire({
+                title: "Log in success ful",
+                text: "",
+                icon: "success"
+            });
             navigate(location?.state ? location.state : "/")
         }
         catch (err) {
+            setLoginLoading(false)
 
 
             if (user) {
@@ -67,7 +80,7 @@ const Login = () => {
                     <TextField name="email" type="email" required id="standard-basic" label="Email" variant="standard" />
                     <TextField name="password" type="password" required id="standard-basic" label="Password" variant="standard" />
 
-                    <button>Login</button>
+                    <button>{loginLoading ? <ImSpinner9 className="spinner"></ImSpinner9> : "Log in"}</button>
                     <SocialLogin marginT={20}></SocialLogin>
 
                 </form>

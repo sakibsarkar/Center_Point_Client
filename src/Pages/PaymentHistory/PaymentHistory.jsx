@@ -32,7 +32,7 @@ const PaymentHistory = () => {
 
                 <div className="tableContainer">
                     <div className="searchCon">
-                        <input type="text" className="searchpayment" onKeyUp={handleSearch} name="search" placeholder='example  Jan/Feb ...' />
+                        <input type="text" className="searchpayment" onKeyUp={handleSearch} name="search" placeholder='Search  Jan/Feb ...' />
                         <MdOutlineSearch />
                     </div>
 

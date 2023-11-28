@@ -22,6 +22,14 @@
     color: white;
     font-size: 15px;
     cursor: pointer;
+    transition: 0.3s;
+    border: 1px solid #fe7097;
+}
+
+.copyBtn:hover {
+    background-color: transparent;
+    border: 1px solid #fe7097;
+    color: #fe7097;
 }
 
 .cutIcon {

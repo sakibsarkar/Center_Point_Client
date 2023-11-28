@@ -1,4 +1,5 @@
 import "./SocialLogin.css";
+import Swal from "sweetalert2";
 import UseAxios from "../../Axios/UseAxios";
 import { useContext, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
@@ -23,6 +24,11 @@ const SocialLogin = ({ marginT = 0 }) => {
 
 
         setWaitForUser(!waitForUser)
+        Swal.fire({
+            title: "Log in successful",
+            text: "",
+            icon: "success"
+        });
         navigate(adress)
 
     }
