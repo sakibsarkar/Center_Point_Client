@@ -25,7 +25,7 @@ This web application serves as a comprehensive solution for efficiently managing
   - Dotenv
   - CORS
 
-### Features
+# Features
 
 - Responsive Design
 - User-Centric Dashboard
