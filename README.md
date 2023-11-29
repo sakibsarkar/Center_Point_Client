@@ -28,7 +28,9 @@ This web application serves as a comprehensive solution for efficiently managing
 # Features
 
 - Responsive Design
-- User-Centric Dashboard
+- User Dashboard
+- Member Dashboard
+- Admin Dashboard
 - Announcement System.
 - Coupon Management
 - Secure Payment Processing

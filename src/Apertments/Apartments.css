@@ -1,6 +1,6 @@
 .apartmentsCon {
     min-height: 80vh;
-    padding: 100px 0;
+    padding: 100px 0 20px 0;
 }
 
 .apartmentsCards {
@@ -16,7 +16,7 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
-    margin: 53px 0 0 0;
+    margin: 40px 0;
 }
 
 .paginationBtns .pageActive {
@@ -43,6 +43,11 @@
     cursor: pointer;
 }
 
+
+.paginationBtns nav {
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
 
 
 @media screen and (max-width: 400px) {

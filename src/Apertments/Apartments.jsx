@@ -55,8 +55,17 @@ const Apartments = () => {
                         </div>
 
 
-                        <div className="paginationBtns">
-                            {/* {
+
+
+
+                    </div >
+            }
+
+            <div className="paginationBtns">
+
+                {/* v1 pagination */}
+
+                {/* {
                                 Array(data[1] ? data[1] / 6 : 1).fill(0)?.map((num, index) => <button
                                     key={index}
                                     onClick={() => handleChangePage(index)}
@@ -64,15 +73,13 @@ const Apartments = () => {
                                 >{index + 1}</button>)
                             } */}
 
-                            <Stack spacing={2}>
-                                <Pagination count={data[1] ? data[1] / 6 : 0} onChange={handleCurrentPage} />
+                {/* v2 pagination */}
 
-                            </Stack>
-                        </div>
+                <Stack spacing={2}>
+                    <Pagination count={data[1] ? data[1] / 6 : 0} onChange={handleCurrentPage} variant="outlined" shape="rounded" showFirstButton showLastButton />
 
-
-                    </div >
-            }
+                </Stack>
+            </div>
 
         </>
     );
