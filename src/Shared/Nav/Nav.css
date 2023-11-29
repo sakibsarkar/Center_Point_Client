@@ -122,7 +122,7 @@ nav {
 
 
 .userModal {
-    width: 148px;
+    width: 200px;
     position: absolute;
     z-index: 99;
     background: white;
@@ -154,6 +154,15 @@ nav {
     background: #ff8181;
     cursor: pointer;
     margin: 17px 0 0 0;
+}
+
+
+.userModal a {
+    color: #414141;
+}
+
+.userModal a:hover {
+    text-decoration: underline;
 }
 
 .smallDeviceNav {

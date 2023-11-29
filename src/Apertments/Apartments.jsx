@@ -2,6 +2,7 @@ import "./Apartments.css";
 import ApartmentCard from "../Cards/Apertments/ApartmentCard";
 import Loader from "../Loader/Loader";
 import UseAxios from "../Axios/UseAxios";
+import { Pagination, Stack } from "@mui/material";
 import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
 import { getItemFromLS } from "../LocalStorage/localStorage";
@@ -21,11 +22,20 @@ const Apartments = () => {
     })
 
 
+
+    // v1 pagination func
     const handleChangePage = (pageNum) => {
         setPage(pageNum)
         window.scroll(0, 0)
 
 
+    }
+
+    // v2 pagination func (material ui pagination)
+    const handleCurrentPage = (event, value) => {
+        setPage(value - 1)
+        console.log(value);
+        // window.scroll(0, 0)
     }
 
     return (
@@ -46,13 +56,18 @@ const Apartments = () => {
 
 
                         <div className="paginationBtns">
-                            {
+                            {/* {
                                 Array(data[1] ? data[1] / 6 : 1).fill(0)?.map((num, index) => <button
                                     key={index}
                                     onClick={() => handleChangePage(index)}
                                     className={page == index ? "pageActive" : "pageNotActive"}
                                 >{index + 1}</button>)
-                            }
+                            } */}
+
+                            <Stack spacing={2}>
+                                <Pagination count={data[1] ? data[1] / 6 : 0} onChange={handleCurrentPage} />
+
+                            </Stack>
                         </div>
 
 

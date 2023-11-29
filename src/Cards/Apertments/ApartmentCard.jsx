@@ -1,6 +1,7 @@
 import "./ApartmentCard.css";
 import Swal from "sweetalert2";
 import UseAxios from "../../Axios/UseAxios";
+import { Button } from "@mui/material";
 import { motion } from "framer-motion";
 import { useContext } from "react";
 import { BsCalendar2WeekFill } from "react-icons/bs";
@@ -82,7 +83,12 @@ const ApartmentCard = ({ data }) => {
             </div>
 
             <div className="agreementBtn">
-                <button onClick={handleAgreement}>Agreement</button>
+                {/* <button onClick={handleAgreement}>Agreement</button> */}
+
+                {/* v2 agreement button*/}
+                <Button variant="contained" disableElevation onClick={handleAgreement}>
+                    Agreement
+                </Button>
             </div>
         </motion.div>
         /* </div> */
