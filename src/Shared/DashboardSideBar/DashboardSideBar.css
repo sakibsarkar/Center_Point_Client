@@ -39,6 +39,27 @@
 }
 
 
+.aditionalLinks {
+
+    border-top: 1px solid #757575;
+    width: 100%;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5px 0 0 6px;
+    font-size: 22px;
+    color: #757575;
+}
+
+
+.aditionalLinks a {
+    color: #757575;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
 
 
 

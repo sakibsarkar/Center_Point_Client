@@ -5,6 +5,7 @@ import { CgProfile } from "react-icons/cg";
 import { FaUsersCog } from "react-icons/fa";
 import { FaRegNewspaper, FaUserLock } from "react-icons/fa6";
 import { GrAnnounce } from "react-icons/gr";
+import { IoIosHome } from "react-icons/io";
 import { MdOutlineNotificationImportant } from "react-icons/md";
 import { MdOutlinePayments } from "react-icons/md";
 import { RiCoupon2Line } from "react-icons/ri";
@@ -62,6 +63,10 @@ const DashboardSideBar = () => {
                         : ""
                 }
 
+                <dir className="aditionalLinks">
+                    <Link to={"/"}><IoIosHome />Home</Link>
+                
+                </dir>
 
 
 
