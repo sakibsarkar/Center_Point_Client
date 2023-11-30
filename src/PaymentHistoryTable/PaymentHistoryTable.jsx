@@ -28,7 +28,7 @@ const PaymentHistoryTable = ({ history, index, searchValue }) => {
                             <td className="paymentEmail">{email}</td>
                             <td>{billMonth}</td>
                             <td>${rent}</td>
-                            <td>${trId}</td>
+                            <td>{trId}</td>
                         </tr>
                     </tbody>
             }
