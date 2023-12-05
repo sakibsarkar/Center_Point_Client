@@ -1,4 +1,4 @@
-# Assignment -12
+# MERN Project
 ## Live link - [Center point](https://assignment-12-65a07.web.app/)
 
 ### About this project
