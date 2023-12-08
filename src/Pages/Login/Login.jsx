@@ -53,7 +53,7 @@ const Login = () => {
                     icon: "error",
                     title: "opps..",
                     text: "something went wrong",
-                    footer: '<a href="#">Why do I have this issue?</a>'
+                    
                 });
                 return
             }

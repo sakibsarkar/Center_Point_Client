@@ -1,5 +1,6 @@
-# MERN Project
+# Center point - Building management application
 ## Live link - [Center point](https://assignment-12-65a07.web.app/)
+## Server Side Repository link - [Center_Point_Server](https://github.com/sakibsarkar/Center_Point_Server)
 
 ### About this project
 
