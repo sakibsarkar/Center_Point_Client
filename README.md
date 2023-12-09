@@ -1,12 +1,12 @@
 # Center point - Building management application
 ## Live link - [Center point](https://assignment-12-65a07.web.app/)
-## Server Side Repository link - [Center_Point_Server](https://github.com/sakibsarkar/Center_Point_Server)
+## 🔗 Server side repository - [Center_Point_Server](https://github.com/sakibsarkar/Center_Point_Server)
 
-### About this project
+### 💡 About this project
 
 This web application serves as a comprehensive solution for efficiently managing a building in Gulshan, Dhaka. It simplifies various aspects of property management, providing features that enhance communication, facilitate agreements, and streamline the overall administration of the building
 
-## Technology used in this project
+# ⚙️ Technology used in this project
 ### Frontend
  - React
  - React Router Dom
@@ -26,7 +26,7 @@ This web application serves as a comprehensive solution for efficiently managing
   - Dotenv
   - CORS
 
-# Features
+# 🪶 Features
 
 - Responsive Design
 - User Dashboard
@@ -38,4 +38,3 @@ This web application serves as a comprehensive solution for efficiently managing
 - while creating account user must have to use strong password
 - Role based Dashboard
 ## 
-    
