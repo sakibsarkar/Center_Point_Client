@@ -31,6 +31,18 @@
 }
 
 
+.printBtn {
+    border: none;
+    background: #01987a;
+    color: white;
+    padding: 4px 27px;
+    font-size: 17px;
+    border-radius: 2px;
+    margin: 13px 0 0 0;
+    cursor: pointer;
+}
+
+
 @media screen and (max-width: 475px) {
     .tableContainer {
         width: 95%;

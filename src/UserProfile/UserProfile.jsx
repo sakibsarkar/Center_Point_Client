@@ -1,7 +1,8 @@
 import "./UserProfile.css";
-import React, { useContext, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
 import UseAxios from "../Axios/UseAxios";
 import { useQuery } from "@tanstack/react-query";
+import { useReactToPrint } from "react-to-print";
 import { Authcontext } from "../AuthProvider/AuthProvider";
 import { getItemFromLS, removeItemFromLS } from "../LocalStorage/localStorage";
 
@@ -32,9 +33,13 @@ const UserProfile = ({ data }) => {
 
     }
 
-    return (
-        <div className="profileContainer">
 
+
+   
+
+
+    return (
+        <div className="profileContainer" >
             <div className="profileCard">
                 <div className="shape">
 
