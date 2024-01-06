@@ -1,6 +1,7 @@
 import "./AboutSection.css";
 import HeadTitle from "../../Shared/HeadTitle/HeadTitle";
 import { GoDotFill } from "react-icons/go";
+import { Parallax } from "react-parallax";
 
 const AboutSection = () => {
 
@@ -9,14 +10,18 @@ const AboutSection = () => {
             <HeadTitle mainTitle={"ABUT THE BUILDING"}></HeadTitle>
 
 
-            <div className="aboutBanner">
 
 
 
-                <h1>Center Point</h1>
-                <p>Precision design with eye-catching aesthetics. A postmodern masterpiece. Located at the heart of Gulshan 2, within easy reach of the diplomatic zones of Gulshan and Baridhara.</p>
 
-            </div>
+            <Parallax bgImage="https://www.united.com.bd/wp-content/uploads/2021/11/GCP.jpeg" strength={500}>
+                <div className="aboutBanner ">
+                    <h1>Center Point</h1>
+                    <p>Precision design with eye-catching aesthetics. A postmodern masterpiece. Located at the heart of Gulshan 2, within easy reach of the diplomatic zones of Gulshan and Baridhara.</p>
+                </div>
+            </Parallax>
+
+
 
 
             <div className="aboutContent">

@@ -25,7 +25,6 @@ const CheckoutForm = () => {
     const [paymentLoading, setPaymentLoading] = useState(false)
 
     const couponRef = useRef(null)
-
     const year = new Date().getFullYear()
 
 
@@ -141,6 +140,8 @@ const CheckoutForm = () => {
         })
 
 
+
+
         if (err) {
             Swal.fire({
                 title: "Error",
@@ -160,6 +161,7 @@ const CheckoutForm = () => {
                 denyButtonText: `Go to Home`
             }).then(result => {
                 if (result.isConfirmed) {
+                    location.reload()
                     navigate("/")
                 }
                 else {

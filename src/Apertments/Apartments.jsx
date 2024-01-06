@@ -35,7 +35,7 @@ const Apartments = () => {
     const handleCurrentPage = (event, value) => {
         setPage(value - 1)
         console.log(value);
-        // window.scroll(0, 0)
+        window.scroll(0, 0)
     }
 
     return (
