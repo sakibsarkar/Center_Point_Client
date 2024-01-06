@@ -23,7 +23,6 @@ This web application serves as a comprehensive solution for efficiently managing
   - MongoDB
   - JSON Web Token (JWT)
   - Express JS
-  - Dotenv
   - CORS
 
 # 🪶 Features
