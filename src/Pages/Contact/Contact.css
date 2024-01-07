@@ -1,0 +1,77 @@
+.contactContainer {
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    font-family: Poppins, sans-serif;
+}
+
+.contactContainer h1 {
+    font-size: 40px;
+    color: #ff1959;
+}
+
+.contactContainer form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 400px;
+    gap: 26px;
+    box-shadow: 0 2px 16.8px 3.2px #00264214;
+    padding: 20px;
+
+}
+
+.contactContainer form>div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+
+.contactContainer form>div>p {
+    font-size: 20px;
+}
+
+.contactContainer form>div>input {
+    width: calc(100% - 5px);
+    outline: none;
+    border: none;
+    background: #e4e4e4;
+    height: 30px;
+    padding: 0 0 0 5px;
+}
+
+.contactContainer form>div>textarea {
+    width: calc(100% - 5px);
+    background: #e4e4e4;
+    padding: 5px 0 0 5px;
+    outline: none;
+    border: none;
+    resize: vertical;
+    min-height: 120px;
+}
+
+.contactContainer form button {
+    border: none;
+    padding: 10px 0;
+    width: 100%;
+    color: white;
+    background: #ff1959;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 470px) {
+    .contactContainer form {
+        width: calc(90vw - 40px);
+    }
+}

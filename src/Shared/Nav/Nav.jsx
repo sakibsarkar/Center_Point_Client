@@ -3,6 +3,7 @@ import { useContext, useState } from "react";
 import { IoMdHome, IoMdLogIn } from "react-icons/io";
 import { IoMenu } from "react-icons/io5";
 import { MdApartment } from "react-icons/md";
+import { MdAttachEmail } from "react-icons/md";
 import { Link, NavLink } from "react-router-dom";
 import { Authcontext } from "../../AuthProvider/AuthProvider";
 import { removeItemFromLS } from "../../LocalStorage/localStorage";
@@ -75,6 +76,9 @@ const Nav = () => {
                         <li><NavLink to={"/apartment"} className={"navLink"}>
                             <MdApartment />Apartment
                         </NavLink></li>
+                        <li><NavLink to={"/contact"} className={"navLink"}>
+                            <MdAttachEmail />Contact
+                        </NavLink></li>
                     </ul>
 
                     {
@@ -126,17 +130,18 @@ const Nav = () => {
                                     : ""
                             }
                             <NavLink className={({ isActive }) => isActive ? "smallLinks miniActive" : "smallLinks"} to={"/apartment"}>Apartment</NavLink>
+                            <NavLink className={({ isActive }) => isActive ? "smallLinks miniActive" : "smallLinks"} to={"/contatct"}>Contact</NavLink>
 
 
                             {
-                                user ? 
-                                <NavLink className={({ isActive }) => isActive ? "smallLinks miniActive" : "smallLinks"} to={profileRoute || "/dashboard"}>Dashboard</NavLink> 
-                               
-                               
-                                : 
-                               
-                               
-                                ""
+                                user ?
+                                    <NavLink className={({ isActive }) => isActive ? "smallLinks miniActive" : "smallLinks"} to={profileRoute || "/dashboard"}>Dashboard</NavLink>
+
+
+                                    :
+
+
+                                    ""
                             }
 
 

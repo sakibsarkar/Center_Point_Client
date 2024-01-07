@@ -39,7 +39,17 @@
     font-size: 17px;
     border-radius: 2px;
     margin: 13px 0 0 0;
+    border: 1px solid #01977a;
     cursor: pointer;
+    transition: 0.3s;
+}
+
+
+.printBtn:hover {
+    border: 1px solid #01977a;
+    background-color: transparent;
+    color: #01977a;
+
 }
 
 
