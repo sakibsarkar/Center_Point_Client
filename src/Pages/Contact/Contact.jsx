@@ -1,4 +1,5 @@
 import "./Contact.css";
+import Swal from "sweetalert2";
 import emailjs from "@emailjs/browser";
 import { useContext, useRef } from "react";
 import { Authcontext } from "../../AuthProvider/AuthProvider";
@@ -15,9 +16,15 @@ const Contact = () => {
     const sendEmail = (e) => {
         e.preventDefault();
 
+
         emailjs.sendForm(import.meta.env.VITE_MAIL_JS_SERVICE_ID, import.meta.env.VITE_MAIL_JS_TPLT_ID, form.current, import.meta.env.VITE_MAIL_JS_PUBLIC_KEY)
             .then((result) => {
-                console.log(result.text);
+                Swal.fire({
+                    title: "Success",
+                    text: "Message send successfuly. please wait we will contact with you",
+                    icon: "success"
+                });
+                e.target.reset()
             }, (error) => {
                 console.log(error.text);
             });
