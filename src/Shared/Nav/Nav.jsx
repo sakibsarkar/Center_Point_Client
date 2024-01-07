@@ -129,6 +129,7 @@ const Nav = () => {
                                     </div>
                                     : ""
                             }
+
                             
                             <NavLink className={({ isActive }) => isActive ? "smallLinks miniActive" : "smallLinks"} to={"/apartment"}>Apartment</NavLink>
                             <NavLink className={({ isActive }) => isActive ? "smallLinks miniActive" : "smallLinks"} to={"/contatct"}>Contact</NavLink>
