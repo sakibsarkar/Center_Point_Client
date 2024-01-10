@@ -7,6 +7,7 @@ import Checkout from "../Pages/Checkout/Checkout";
 import Contact from "../Pages/Contact/Contact";
 import DashboardLayout from "../Layout/DashboardLayout";
 import ErrorPage from "../ErrorPage/ErrorPage";
+import Faq from "../Pages/Faq/Faq";
 import Home from "../Pages/Home/Home";
 import Login from "../Pages/Login/Login";
 import MainLayout from "../Layout/mainLayout";
@@ -41,6 +42,9 @@ export const router = createBrowserRouter([
             {
                 path: "/contact",
                 element: <Contact />
+            }, {
+                path: "/faq",
+                element: <Faq />
             }
 
         ],

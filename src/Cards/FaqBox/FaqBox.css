@@ -1,0 +1,58 @@
+.box {
+    background: #bdbdbd;
+    width: 700px;
+    border-radius: 10px;
+    overflow: hidden;
+    
+
+}
+
+.question {
+    padding: 17px 12px;
+    color: white;
+    background: #ff1959;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.question .arrow {
+    font-size: 27px;
+}
+
+.answer {
+    background: #ffe4ec;
+    padding: 10px;
+    overflow: hidden;
+    transition: 0.3s;
+
+}
+
+
+
+@media screen and (max-width: 400px) {
+    .box {
+        width: 95%;
+    }
+}
+
+@media screen and (min-width: 400px) and (max-width: 720px) {
+    .box {
+        width: 95%;
+    }
+}
+
+@media screen and (min-width: 720px) and (max-width: 1060px) {
+    .box {
+        width: 700px;
+    }
+}
+
+@media screen and (min-width: 1060px) and (max-width: 1280px) {
+    .box {
+        width: 500px;
+    }
+}
+
+@media screen and (min-width: 1921px) {}

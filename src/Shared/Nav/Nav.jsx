@@ -1,5 +1,6 @@
 import "./Nav.css";
 import { useContext, useState } from "react";
+import { FaQuestion } from "react-icons/fa6";
 import { IoMdHome, IoMdLogIn } from "react-icons/io";
 import { IoMenu } from "react-icons/io5";
 import { MdApartment } from "react-icons/md";
@@ -79,6 +80,9 @@ const Nav = () => {
                         <li><NavLink to={"/contact"} className={"navLink"}>
                             <MdAttachEmail />Contact
                         </NavLink></li>
+                        <li><NavLink to={"/faq"} className={"navLink"}>
+                            <FaQuestion />Faq
+                        </NavLink></li>
                     </ul>
 
                     {
@@ -130,7 +134,7 @@ const Nav = () => {
                                     : ""
                             }
 
-                            
+
                             <NavLink className={({ isActive }) => isActive ? "smallLinks miniActive" : "smallLinks"} to={"/apartment"}>Apartment</NavLink>
                             <NavLink className={({ isActive }) => isActive ? "smallLinks miniActive" : "smallLinks"} to={"/contatct"}>Contact</NavLink>
 

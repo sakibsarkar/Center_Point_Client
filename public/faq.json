@@ -1,0 +1,19 @@
+[
+    {
+        "question": "How do I buy appartmentt on this website?",
+        "answer": "To buy your appartmen, log in to your account, click on the 'Appartmen' button, and follow the step-by-step instructions. Send your agreement and wait for the admin confirmation"
+    },
+    {
+        "question": "Is my personal data secure on this website?",
+        "answer": "Yes, we take data security seriously. Your data is encrypted and stored securely on our servers. We have robust security measures in place to protect your information from unauthorized access."
+    },
+    {
+        "question": "Can I edit my agreement details after sending it?",
+        "answer": "Once an agreement is submitted, there is no way to edit your agreement until your agreement get rejected."
+    },
+   
+    {
+        "question": "Is there a deadline for Agreement submissions on this website?",
+        "answer": "The submission deadline depends on your agreement's due date, Please ensure you submit your agreement well in advance of the deadline to avoid any issues."
+    }
+]
