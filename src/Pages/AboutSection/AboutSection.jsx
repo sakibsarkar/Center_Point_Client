@@ -1,5 +1,6 @@
 import "./AboutSection.css";
 import HeadTitle from "../../Shared/HeadTitle/HeadTitle";
+import Tilt from "react-parallax-tilt";
 import { GoDotFill } from "react-icons/go";
 import { Parallax } from "react-parallax";
 
@@ -27,11 +28,15 @@ const AboutSection = () => {
             <div className="aboutContent">
 
 
-                <div className="buildingImg">
-                    <img className="buildingBg" src="https://i.ibb.co/bWgj8zr/ananta-plaza-central-2-of-17-overlay-2.jpg" alt="" />
 
-                    <img className="overflowImg" src="https://i.ibb.co/7Yg6d2p/GCP-16.jpg" alt="" />
-                </div>
+                <Tilt>
+                    <div className="buildingImg">
+                        <img className="buildingBg" src="https://i.ibb.co/bWgj8zr/ananta-plaza-central-2-of-17-overlay-2.jpg" alt="" />
+
+                        <img className="overflowImg" src="https://i.ibb.co/7Yg6d2p/GCP-16.jpg" alt="" />
+                    </div>
+                </Tilt>
+
 
 
                 <div className="buildingInfo">
