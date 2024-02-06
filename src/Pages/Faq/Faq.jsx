@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 
 const Faq = () => {
     const [faq, setFaq] = useState([])
+    const [shouldOpen, setShouldOpen] = useState(0)
 
     useEffect(() => {
         fetch("faq.json")
@@ -22,7 +23,14 @@ const Faq = () => {
             <div className="holder">
                 <div className="faqs">
                     {
-                        faq?.map((item, index) => <FaqBox key={index} faqData={item}></FaqBox>)
+                        faq?.map((item, index) => <FaqBox
+                            key={index}
+                            index={index}
+                            shouldOpen={shouldOpen}
+                            setShouldOpen={setShouldOpen}
+                            faqData={item}
+
+                        />)
                     }
                 </div>
 
